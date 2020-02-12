@@ -1,0 +1,20 @@
+PODS:
+  - lottie-ios (3.1.6)
+  - Zip (1.1.0)
+
+DEPENDENCIES:
+  - lottie-ios (~> 3.1.5)
+  - Zip (~> 1.1)
+
+SPEC REPOS:
+  trunk:
+    - lottie-ios
+    - Zip
+
+SPEC CHECKSUMS:
+  lottie-ios: 85ce835dd8c53e02509f20729fc7d6a4e6645a0a
+  Zip: 8877eede3dda76bcac281225c20e71c25270774c
+
+PODFILE CHECKSUM: f1cb2fc1a141b37d08e9811c7b2525b800202c59
+
+COCOAPODS: 1.8.4

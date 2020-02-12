@@ -40,11 +40,11 @@
 		607FACE51AFB9204008FA782 /* dotlottie-ios_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "dotlottie-ios_Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		6927F522399013C687B7FD8D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		6927F522399013C687B7FD8D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		7D8D744E0F03B539449867C2 /* Pods-dotlottie-ios_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dotlottie-ios_Tests.debug.xcconfig"; path = "Target Support Files/Pods-dotlottie-ios_Tests/Pods-dotlottie-ios_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		8F41099080191E5F512774CC /* Pods-dotlottie-ios_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dotlottie-ios_Example.release.xcconfig"; path = "Target Support Files/Pods-dotlottie-ios_Example/Pods-dotlottie-ios_Example.release.xcconfig"; sourceTree = "<group>"; };
-		916CA35B9806ADF273A71C7C /* dotlottie-ios.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = "dotlottie-ios.podspec"; path = "../dotlottie-ios.podspec"; sourceTree = "<group>"; };
-		A79A647BE56538DE66C9B75C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		916CA35B9806ADF273A71C7C /* dotlottie-ios.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "dotlottie-ios.podspec"; path = "../dotlottie-ios.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A79A647BE56538DE66C9B75C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		CE31F8C58D28409BE1F7B2AF /* Pods_dotlottie_ios_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dotlottie_ios_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBF351706AC835E2A8E8C5B3 /* Pods-dotlottie-ios_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dotlottie-ios_Example.debug.xcconfig"; path = "Target Support Files/Pods-dotlottie-ios_Example/Pods-dotlottie-ios_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,7 +156,6 @@
 				7D8D744E0F03B539449867C2 /* Pods-dotlottie-ios_Tests.debug.xcconfig */,
 				439557D470BEB8A2F99613A7 /* Pods-dotlottie-ios_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -313,11 +313,15 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-dotlottie-ios_Example/Pods-dotlottie-ios_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/dotlottie-ios/dotlottie_ios.framework",
+				"${BUILT_PRODUCTS_DIR}/Zip/Zip.framework",
+				"${BUILT_PRODUCTS_DIR}/dotlottie-ios/dotLottie.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/dotlottie_ios.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Zip.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/dotLottie.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

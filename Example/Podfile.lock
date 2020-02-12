@@ -1,0 +1,27 @@
+PODS:
+  - dotlottie-ios (0.1.0):
+    - lottie-ios (~> 3.1.5)
+    - Zip (~> 1.1)
+  - lottie-ios (3.1.6)
+  - Zip (1.1.0)
+
+DEPENDENCIES:
+  - dotlottie-ios (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - lottie-ios
+    - Zip
+
+EXTERNAL SOURCES:
+  dotlottie-ios:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  dotlottie-ios: c493edcd3a60315d4bb434c1157086e5124e4f46
+  lottie-ios: 85ce835dd8c53e02509f20729fc7d6a4e6645a0a
+  Zip: 8877eede3dda76bcac281225c20e71c25270774c
+
+PODFILE CHECKSUM: 5be824c7785a9f75ff02415cfaf1ee3d887df476
+
+COCOAPODS: 1.8.4

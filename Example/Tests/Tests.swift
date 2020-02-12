@@ -1,5 +1,4 @@
 import XCTest
-import dotlottie-ios
 
 class Tests: XCTestCase {
     
