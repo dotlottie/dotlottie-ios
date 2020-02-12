@@ -79,11 +79,10 @@
 		6CF2F20B1D4DD3CED222B0B7E64EE519 /* TextCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE1C74A2122280BF19DBCAC51639772 /* TextCompositionLayer.swift */; };
 		6E4D13CC84D694771D64B9836A9C2150 /* BezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D2287BFED8EBC7A028EA14E21A51FC /* BezierPath.swift */; };
 		6F768526457F313C23A3F289BDB02624 /* CompoundBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92D4FF41E49931989AA9F435FC68736 /* CompoundBezierPath.swift */; };
-		724411A86B23F79B0095C257E4F2C6BE /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285EA2F95620124844DA93FBD6C7039F /* ReplaceMe.swift */; };
 		72539B209A43DDF3D7AC4088E4203C54 /* Keyframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AEB36C67F2C8AEB99432B75590E69F /* Keyframe.swift */; };
 		75ED97FEB5E07B82424CEA3D3229E7CE /* Pods-dotlottie-ios_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F3B473A6EAB8295D828DE9ADE58ABF46 /* Pods-dotlottie-ios_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		76E2E2541B5F70CFF7815B60FE42E4B7 /* KeyedDecodingContainerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC097FC7932ED4C1A5D558B1C03C54A /* KeyedDecodingContainerExtensions.swift */; };
-		78BCD62923F3BCA70055054C /* DotLottieAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BCD62823F3BCA70055054C /* DotLottieAnimation.swift */; };
+		786DB67923F43FB20084F5BD /* DotLottieAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786DB67823F43FB20084F5BD /* DotLottieAnimation.swift */; };
 		7B4FDF6F208514F002CDA5371C28CE2E /* PointValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D26AB11722E15E2D787D6CD6DE2C082 /* PointValueProvider.swift */; };
 		7BA5AE348B4252F892C47A93AAFFE1D6 /* LayerTextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FF4BF2306790127513597B8605C8E5 /* LayerTextProvider.swift */; };
 		7CAE3BBAB9702D449BB616D06A3AF9D9 /* ShapeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE051855AC2EE50D091AEBAF781CFC44 /* ShapeNode.swift */; };
@@ -248,7 +247,6 @@
 		25D50DD01D54C2693666F06B945DF44B /* SolidCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SolidCompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/SolidCompositionLayer.swift"; sourceTree = "<group>"; };
 		26AEB36C67F2C8AEB99432B75590E69F /* Keyframe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Keyframe.swift; path = "lottie-swift/src/Private/Model/Keyframes/Keyframe.swift"; sourceTree = "<group>"; };
 		2758E54899E2B27845E24561385D661F /* Zip-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Zip-prefix.pch"; sourceTree = "<group>"; };
-		285EA2F95620124844DA93FBD6C7039F /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = "dotlottie-ios/Classes/ReplaceMe.swift"; sourceTree = "<group>"; };
 		288EADAC59916E593CDBC20FE92428EC /* SingleValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SingleValueProvider.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/ValueProviders/SingleValueProvider.swift"; sourceTree = "<group>"; };
 		2914BA0BD32961F5FEDB6F730F313C3E /* StarNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/PathNodes/StarNode.swift"; sourceTree = "<group>"; };
 		29321E41EEE6B1B6A58C98B6E51CD6B0 /* AnyValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyValueProvider.swift; path = "lottie-swift/src/Public/DynamicProperties/AnyValueProvider.swift"; sourceTree = "<group>"; };
@@ -306,7 +304,7 @@
 		754FBDB5209F98FFD6BC7698D19DD4B5 /* AnyValueContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyValueContainer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/Protocols/AnyValueContainer.swift"; sourceTree = "<group>"; };
 		765F72C1A26F54331662CDCFF8CCA8C4 /* crypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypt.h; path = Zip/minizip/crypt.h; sourceTree = "<group>"; };
 		7754AE354A4D3BE2DCBDA7BF4895E318 /* ShapeRenderLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeRenderLayer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/RenderLayers/ShapeRenderLayer.swift"; sourceTree = "<group>"; };
-		78BCD62823F3BCA70055054C /* DotLottieAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotLottieAnimation.swift; sourceTree = "<group>"; };
+		786DB67823F43FB20084F5BD /* DotLottieAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DotLottieAnimation.swift; path = "dotlottie-ios/Classes/DotLottieAnimation.swift"; sourceTree = "<group>"; };
 		7ADCA7A02376D82ADCA3E376C059ADB5 /* PathOutputNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PathOutputNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/PathOutputNode.swift"; sourceTree = "<group>"; };
 		7BE1C74A2122280BF19DBCAC51639772 /* TextCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextCompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/TextCompositionLayer.swift"; sourceTree = "<group>"; };
 		7D26AB11722E15E2D787D6CD6DE2C082 /* PointValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PointValueProvider.swift; path = "lottie-swift/src/Public/DynamicProperties/ValueProviders/PointValueProvider.swift"; sourceTree = "<group>"; };
@@ -751,10 +749,9 @@
 		EC2B2232CC7407CE6DB01A27F9404230 /* dotlottie-ios */ = {
 			isa = PBXGroup;
 			children = (
-				285EA2F95620124844DA93FBD6C7039F /* ReplaceMe.swift */,
 				FFE92369C9B06720BC1CD9B82A6BC25B /* Pod */,
 				60D611453E4229A14908007FEC194BAB /* Support Files */,
-				78BCD62823F3BCA70055054C /* DotLottieAnimation.swift */,
+				786DB67823F43FB20084F5BD /* DotLottieAnimation.swift */,
 			);
 			name = "dotlottie-ios";
 			path = ../..;
@@ -933,6 +930,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
+				TargetAttributes = {
+					CA0792263EB39E741BF134712B8A9E10 = {
+						LastSwiftMigration = 1110;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1000,8 +1002,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3793E27AF6E82559F86ED81C2EE0D0D /* dotlottie-ios-dummy.m in Sources */,
-				78BCD62923F3BCA70055054C /* DotLottieAnimation.swift in Sources */,
-				724411A86B23F79B0095C257E4F2C6BE /* ReplaceMe.swift in Sources */,
+				786DB67923F43FB20084F5BD /* DotLottieAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1250,6 +1251,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FB37A63E5757FCFA703CDCD3FA219D34 /* dotlottie-ios.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1270,6 +1272,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1411,6 +1414,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FB37A63E5757FCFA703CDCD3FA219D34 /* dotlottie-ios.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
