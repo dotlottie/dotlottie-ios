@@ -25,7 +25,7 @@ dotLottie-ios is available through [CocoaPods](https://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'dotLottie-ios', :git => 'https://github.com/dotlottie/dotLottie-ios.git'
+pod 'dotlottie-ios', :git => 'https://github.com/dotlottie/dotlottie-ios.git'
 ```
 
 ## Using dotLottie
