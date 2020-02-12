@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'dotlottie-ios_Example' do
+  pod 'dotlottie-ios', :path => '../'
+
+  target 'dotlottie-ios_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
