@@ -1,6 +1,0 @@
-framework module Pods_dotlottie_ios_Example {
-  umbrella header "Pods-dotlottie-ios_Example-umbrella.h"
-
-  export *
-  module * { export * }
-}
