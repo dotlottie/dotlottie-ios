@@ -9,13 +9,13 @@ import Foundation
 import CoreGraphics
 import Lottie
 
-public class DotLottieAnimation{
+public class DotLottie {
     
     /// Loads animation in bundle with given name
     /// - Parameters:
     ///   - name: name of animation in bundle
     ///   - completion: Lottie Animation
-    public static func load(name: String, completion: @escaping (Animation?) -> Void){
+    public static func load(name: String, completion: @escaping (Animation?) -> Void) {
         if let url = DotLottieUtils.bundleURL(for: name) {
             animation(for: DotLottieFile(url: url)?.animationUrl ?? url, completion: completion)
         } else {

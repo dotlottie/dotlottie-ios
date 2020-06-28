@@ -31,7 +31,7 @@
 		2A5A9304BF6EE2D38C44440AF0AFE705 /* Mask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0648C4744AF00195A3D029ACE2BD765 /* Mask.swift */; };
 		2CAC01D03963CB5C932457081A332724 /* SizeValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7AADA5AC005AC14E6B793EB5FDF493 /* SizeValueProvider.swift */; };
 		2E5C7F85FC74C14C9596D808AF82635C /* RenderNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F16ACA64BEA62931EA4CA74ED69A6F /* RenderNode.swift */; };
-		2F4D8B530CB3CD9CBFD540D2B302C9B9 /* DotLottieAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA94B8156846208AAD98BEB3955BA128 /* DotLottieAnimation.swift */; };
+		2F4D8B530CB3CD9CBFD540D2B302C9B9 /* DotLottie.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA94B8156846208AAD98BEB3955BA128 /* DotLottie.swift */; };
 		2FC71EB4028C7150FA9AA9ABFCB54D39 /* KeyframeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466D67F93F1970C4A6DCD4C69605DBED /* KeyframeExtensions.swift */; };
 		31254B50644BDBD3B523FE32C0D7870C /* Stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8609CD69F9943C5ECCE7B754087E05 /* Stroke.swift */; };
 		315ED7781E04060DA92E0E0D203364BE /* ShapeCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE4100401FF2AA9D24FDB852DDD201A /* ShapeCompositionLayer.swift */; };
@@ -357,7 +357,7 @@
 		B7CEE1EF58010C6092A23BDD4EEFC176 /* Zip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Zip.release.xcconfig; sourceTree = "<group>"; };
 		B8D6C7E366CDB19461FD315B9A3C4204 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		B90AD84F7351EB3F8BC74681563E0C12 /* AnyNodeProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyNodeProperty.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/Protocols/AnyNodeProperty.swift"; sourceTree = "<group>"; };
-		BA94B8156846208AAD98BEB3955BA128 /* DotLottieAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DotLottieAnimation.swift; path = Sources/dotLottie/DotLottieAnimation.swift; sourceTree = "<group>"; };
+		BA94B8156846208AAD98BEB3955BA128 /* DotLottie.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DotLottie.swift; path = Sources/dotLottie/DotLottie.swift; sourceTree = "<group>"; };
 		BBE4D6B0A0685503338C6F244C5C758F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		BC30DEAD9D0422907EF0534168107632 /* CGFloatExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGFloatExtensions.swift; path = "lottie-swift/src/Private/Utility/Extensions/CGFloatExtensions.swift"; sourceTree = "<group>"; };
 		BCA54CAF4C40DB02F6D53134EA2CD156 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -688,7 +688,7 @@
 		9FC24D120BFAF988B1BD9918FFD54D6A /* dotLottie */ = {
 			isa = PBXGroup;
 			children = (
-				BA94B8156846208AAD98BEB3955BA128 /* DotLottieAnimation.swift */,
+				BA94B8156846208AAD98BEB3955BA128 /* DotLottie.swift */,
 				9F5D82061B1691408B1E789A50DF4D8D /* DotLottieFile.swift */,
 				6C044FED7961788B49904C762A297E38 /* DotLottieManifest.swift */,
 				101FEC1F7441F5FE57EB25244EEF7651 /* DotLottieUtils.swift */,
@@ -1020,7 +1020,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B93E8F941010A469A79B18759642C60 /* dotLottie-dummy.m in Sources */,
-				2F4D8B530CB3CD9CBFD540D2B302C9B9 /* DotLottieAnimation.swift in Sources */,
+				2F4D8B530CB3CD9CBFD540D2B302C9B9 /* DotLottie.swift in Sources */,
 				DC49693A8D8361C62FD83B84F6DBE337 /* DotLottieFile.swift in Sources */,
 				4CD323CE6198C44E0D377AB77C73E1FC /* DotLottieManifest.swift in Sources */,
 				656AC883858FBD6CB3DCDCEEF35D371F /* DotLottieUtils.swift in Sources */,

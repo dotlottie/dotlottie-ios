@@ -10,7 +10,7 @@ import Foundation
 
 /// Manifest model for .lottie File
 public struct DotLottieManifest: Decodable {
-    public var animations: [DotLottieManifestAnimation]
+    public var animations: [DotLottieAnimation]
     public var version: String
     public var author: String
     public var generator: String
@@ -33,7 +33,7 @@ public struct DotLottieManifest: Decodable {
 }
 
 /// Animation model for .lottie File
-public struct DotLottieManifestAnimation: Decodable {
+public struct DotLottieAnimation: Decodable {
     public var loop: Bool
     public var themeColor: String
     public var speed: Float

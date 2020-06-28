@@ -45,7 +45,7 @@ import dotLottie
 ```swift
 let animationView = AnimationView()
 
-DotLottieAnimation.load(name: "animation") { (animation) in
+DotLottie.load(name: "animation") { (animation) in
     if let animation = animation {
         self.animationView.animation = animation
         self.animationView.bounds = CGRect(x: 0, y: 0, width: 300, height: 300)
@@ -63,7 +63,7 @@ DotLottieAnimation.load(name: "animation") { (animation) in
 ```swift
 let animationView = AnimationView()
 
-DotLottieAnimation.load(from: URL(string:"https://dotlottie.io/sample_files/animation.lottie")!){ (animation) in
+DotLottie.load(from: URL(string:"https://dotlottie.io/sample_files/animation.lottie")!){ (animation) in
     if let animation = animation {
         self.animationView.animation = animation
         self.animationView.bounds = CGRect(x: 0, y: 0, width: 300, height: 300)
@@ -81,7 +81,7 @@ DotLottieAnimation.load(from: URL(string:"https://dotlottie.io/sample_files/anim
 ```swift
 let animationView = AnimationView()
 
-DotLottieAnimation.load(from: URL(string:"path/to/file")!){ (animation) in
+DotLottie.load(from: URL(string:"path/to/file")!){ (animation) in
     if let animation = animation {
         self.animationView.animation = animation
         self.animationView.bounds = CGRect(x: 0, y: 0, width: 300, height: 300)

@@ -20,14 +20,14 @@ class ViewController: UIViewController {
         stackView.arrangedSubviews.forEach({ $0.removeFromSuperview() })
         
         // Load .lottie files using file path
-        // replace DotLottieAnimation.load(from: URL(string:"")!)
-        // with DotLottieAnimation.load(from: URL(string: "file/to/path")!)
+        // replace DotLottie.load(from: URL(string:"")!)
+        // with DotLottie.load(from: URL(string: "file/to/path")!)
         
         // Load local .lottie files
-        // replace DotLottieAnimation.load(from: URL(string:"")!)
-        // with DotLottieAnimation.load(name: "pushups")
+        // replace DotLottie.load(from: URL(string:"")!)
+        // with DotLottie.load(name: "pushups")
         
-        DotLottieAnimation.load(from: URL(string:"https://dotlottie.io/sample_files/animation.lottie")!) { [weak self] (animation) in
+        DotLottie.load(from: URL(string:"https://dotlottie.io/sample_files/animation.lottie")!) { [weak self] (animation) in
             guard let animation = animation else {
                 print("Error loading animation")
                 return
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
             self?.setupAnimation(animation, title: "Remote .lottie file")
         }
         
-        DotLottieAnimation.load(from: URL(string:"https://assets9.lottiefiles.com/packages/lf20_2gjZuP.json")!) { [weak self] (animation) in
+        DotLottie.load(from: URL(string:"https://assets9.lottiefiles.com/packages/lf20_2gjZuP.json")!) { [weak self] (animation) in
             guard let animation = animation else {
                 print("Error loading animation")
                 return
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
             self?.setupAnimation(animation, title: "Remote JSON file")
         }
         
-        DotLottieAnimation.load(name: "lottie") { [weak self] (animation) in
+        DotLottie.load(name: "lottie") { [weak self] (animation) in
             guard let animation = animation else {
                 print("Error loading animation")
                 return
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
             self?.setupAnimation(animation, title: "Local .lottie file")
         }
         
-        DotLottieAnimation.load(name: "globe") { [weak self] (animation) in
+        DotLottie.load(name: "globe") { [weak self] (animation) in
             guard let animation = animation else {
                 print("Error loading animation")
                 return
