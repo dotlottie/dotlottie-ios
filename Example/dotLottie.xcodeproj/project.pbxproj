@@ -30,7 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00693F072229C1B29EC4332A /* dotLottie.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = dotLottie.podspec; path = ../dotLottie.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		00693F072229C1B29EC4332A /* dotLottie.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = dotLottie.podspec; path = ../dotLottie.podspec; sourceTree = "<group>"; };
 		0671147725BF3536AFE1BCD1 /* Pods_dotLottie_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dotLottie_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		506EF0B5994B56C0CF4DC140 /* Pods_dotLottie_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dotLottie_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B72223FE3E7DA13E5E65857 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
