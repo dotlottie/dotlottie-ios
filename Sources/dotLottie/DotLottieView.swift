@@ -13,8 +13,9 @@ public struct DotLottieView: UIViewRepresentable {
         Coordinator(self)
     }
     
-    public var settings: DotLottieSettings
-    @Binding public var play: Bool
+    var settings: DotLottieSettings
+    var completionHandler: LottieCompletionBlock?
+    @Binding var play: Int
     
     public var animationView = AnimationView()
     
@@ -22,9 +23,13 @@ public struct DotLottieView: UIViewRepresentable {
     /// - Parameters:
     ///   - settings: animation settings
     ///   - play: play binding
-    public init(with settings: DotLottieSettings, play: Binding<Bool>) {
+    ///   - onCompleted: Fired when animation has completed
+    public init(with settings: DotLottieSettings,
+                play: Binding<Int>,
+                onCompleted: LottieCompletionBlock? = nil) {
         self.settings = settings
         self._play = play
+        self.completionHandler = onCompleted
     }
     
     /// View coordinator
@@ -41,20 +46,16 @@ public struct DotLottieView: UIViewRepresentable {
     /// - Parameter context: UIViewRepresentableContext
     /// - Returns: UIView
     public func makeUIView(context: UIViewRepresentableContext<DotLottieView>) -> UIView {
+        let view = UIView()
+        
         if let name = settings.name {
             DotLottie.load(name: name, completion: setupAnimationView(_:))
         } else if let url = settings.url {
             DotLottie.load(from: url, completion: setupAnimationView(_:))
         }
 
-        return containerView()
-    }
-    
-    /// Initialize container view and adds constraints
-    /// - Returns: Container view
-    private func containerView() -> UIView {
-        let view = UIView()
         animationView.translatesAutoresizingMaskIntoConstraints = false
+        animationView.removeFromSuperview()
         view.addSubview(animationView)
 
         NSLayoutConstraint.activate([
@@ -74,7 +75,7 @@ public struct DotLottieView: UIViewRepresentable {
         animationView.animationSpeed = settings.speed
         
         if settings.autoPlay {
-            animationView.play(completion: settings.completionHandler)
+            animationView.play(completion: completionHandler)
         }
     }
     
@@ -83,10 +84,10 @@ public struct DotLottieView: UIViewRepresentable {
     ///   - uiView: content view to update
     ///   - context: UIViewRepresentableContext
     public func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<DotLottieView>) {
-        if play {
-            animationView.play()
-        } else {
+        if animationView.isAnimationPlaying {
             animationView.pause()
+        } else {
+            animationView.play(completion: completionHandler)
         }
     }
 }

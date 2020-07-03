@@ -15,19 +15,15 @@ class ContentViewModel: ObservableObject {
         animations = [
             .init(title: "Local .lottie file",
                   settings: .init(name: "lottie",
-                                  autoPlay: true,
                                   loopMode: .loop)),
             .init(title: "Local .json file",
                   settings: .init(name: "globe",
-                                  autoPlay: true,
                                   loopMode: .loop)),
             .init(title: "Remote .lottie file",
                   settings: .init(url: URL(string: "https://dotlottie.io/sample_files/animation.lottie")!,
-                                  autoPlay: true,
                                   loopMode: .loop)),
             .init(title: "Remote .json file",
                   settings: .init(url: URL(string: "https://assets9.lottiefiles.com/packages/lf20_2gjZuP.json")!,
-                                  autoPlay: true,
                                   loopMode: .loop))
         ]
     }

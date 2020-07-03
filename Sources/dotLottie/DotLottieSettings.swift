@@ -16,7 +16,6 @@ public struct DotLottieSettings {
     public var autoPlay: Bool = false
     public var loopMode: LottieLoopMode = .playOnce
     public var speed: CGFloat = 1
-    public var completionHandler: LottieCompletionBlock?
     
     /// Initializes Settings with file name
     /// - Parameters:
@@ -25,19 +24,16 @@ public struct DotLottieSettings {
     ///   - autoPlay: true for start playing upon setup
     ///   - loopMode: loop mode
     ///   - speed: playback speed
-    ///   - completionHandler: to be called upon completed
     public init(name: String,
                 aspectRatio: UIView.ContentMode = .scaleAspectFit,
                 autoPlay: Bool = false,
                 loopMode: LottieLoopMode = .playOnce,
-                speed: CGFloat = 1,
-                completionHandler: LottieCompletionBlock? = nil) {
+                speed: CGFloat = 1) {
         self.name = name
         self.aspectRatio = aspectRatio
         self.autoPlay = autoPlay
         self.loopMode = loopMode
         self.speed = speed
-        self.completionHandler = completionHandler
     }
     
     /// Initializes Settings with url
@@ -51,13 +47,11 @@ public struct DotLottieSettings {
     public init(url: URL, aspectRatio: UIView.ContentMode = .scaleAspectFit,
                 autoPlay: Bool = false,
                 loopMode: LottieLoopMode = .playOnce,
-                speed: CGFloat = 1,
-                completionHandler: LottieCompletionBlock? = nil) {
+                speed: CGFloat = 1) {
         self.url = url
         self.aspectRatio = aspectRatio
         self.autoPlay = autoPlay
         self.loopMode = loopMode
         self.speed = speed
-        self.completionHandler = completionHandler
     }
 }

@@ -9,8 +9,13 @@
 import SwiftUI
 import dotLottie
 
+prefix func !(value: Binding<Bool>) -> Binding<Bool> {
+    return Binding<Bool>(get: { return !value.wrappedValue},
+                         set: { b in value.wrappedValue = b})
+}
+
 struct ContentView: View {
-    @State var play: Bool = false
+    @State var play: Int = 0
     @ObservedObject var viewModel: ContentViewModel
     
     var body: some View {
@@ -21,15 +26,16 @@ struct ContentView: View {
                         VStack {
                             Text(animation.title)
                                 .font(.headline)
-                            DotLottieView(with: animation.settings, play: self.$play)
-                                .frame(height:200)
+                            DotLottieView(with: animation.settings, play: self.$play, onCompleted: { completed in
+                                print("\(animation.title) \(completed ? "completed" : "paused")")
+                            }).frame(height:200)
                         }
                         .padding(20)
                         .border(Color.black, width: 1)
                     }
                 }
             }
-            Button(play ? "Pause" : "Play"){ self.play = !self.play }
+            Button("Toggle play"){ self.play = self.play == 1 ? 0 : 1 }
         }
     }
 }
