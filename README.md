@@ -21,11 +21,19 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
+### Cocoapods
+
 dotLottie-ios is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'dotlottie-ios', :git => 'https://github.com/dotlottie/dotlottie-ios.git'
+pod 'dotLottie', :git => 'https://github.com/dotlottie/dotlottie-ios.git'
+```
+
+### Swift Package Manager
+
+```ruby
+.package(url: "https://github.com/dotlottie/dotlottie-ios.git", from: "0.1.1")
 ```
 
 ## Using dotLottie
@@ -37,7 +45,7 @@ import dotLottie
 ```swift
 let animationView = AnimationView()
 
-DotLottieAnimation().load(name: "animation"){ (animation) in
+DotLottie.load(name: "animation") { (animation) in
     if let animation = animation {
         self.animationView.animation = animation
         self.animationView.bounds = CGRect(x: 0, y: 0, width: 300, height: 300)
@@ -55,7 +63,7 @@ DotLottieAnimation().load(name: "animation"){ (animation) in
 ```swift
 let animationView = AnimationView()
 
-DotLottieAnimation().load(from: URL(string:"https://dotlottie.io/sample_files/animation.lottie")!){ (animation) in
+DotLottie.load(from: URL(string:"https://dotlottie.io/sample_files/animation.lottie")!){ (animation) in
     if let animation = animation {
         self.animationView.animation = animation
         self.animationView.bounds = CGRect(x: 0, y: 0, width: 300, height: 300)
@@ -73,7 +81,7 @@ DotLottieAnimation().load(from: URL(string:"https://dotlottie.io/sample_files/an
 ```swift
 let animationView = AnimationView()
 
-DotLottieAnimation().load(filePath: URL(string:"path/to/file")!){ (animation) in
+DotLottie.load(from: URL(string:"path/to/file")!){ (animation) in
     if let animation = animation {
         self.animationView.animation = animation
         self.animationView.bounds = CGRect(x: 0, y: 0, width: 300, height: 300)
@@ -91,6 +99,10 @@ DotLottieAnimation().load(filePath: URL(string:"path/to/file")!){ (animation) in
 
 [whit3hawks](https://twitter.com/whit3hawks) <br />
 [Sofwath](https://twitter.com/sofwath)
+
+## Contributor
+
+[Evandro Harrison Hoffmann](https://github.com/eharrison) | evandro.hoffmann@gmail.com
 
 ## License
 

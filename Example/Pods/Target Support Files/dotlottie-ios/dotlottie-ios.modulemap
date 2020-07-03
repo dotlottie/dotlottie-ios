@@ -1,6 +1,0 @@
-framework module dotLottie {
-  umbrella header "dotlottie-ios-umbrella.h"
-
-  export *
-  module * { export * }
-}
