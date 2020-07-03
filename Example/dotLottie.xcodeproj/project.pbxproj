@@ -15,9 +15,10 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		94873F1624AEE69E0079CDEE /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94873F1524AEE69E0079CDEE /* ContentViewModel.swift */; };
 		949C664B24AED38F00D656C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949C664A24AED38F00D656C1 /* ContentView.swift */; };
 		949C664D24AED43500D656C1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949C664C24AED43500D656C1 /* MainViewController.swift */; };
+		94AF58F724AF36F500F98598 /* RemoteAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF58F624AF36F500F98598 /* RemoteAnimationView.swift */; };
+		94AF58F924AF3A8000F98598 /* LocalAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF58F824AF3A8000F98598 /* LocalAnimationView.swift */; };
 		94B097DC24A8355B005C8DB1 /* globe.json in Resources */ = {isa = PBXBuildFile; fileRef = 94B097DB24A8355B005C8DB1 /* globe.json */; };
 		94B097DE24A83880005C8DB1 /* lottie.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 94B097DD24A83571005C8DB1 /* lottie.lottie */; };
 /* End PBXBuildFile section */
@@ -49,9 +50,10 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		63FA4979CCDBC305938BFED5 /* Pods-dotLottie_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dotLottie_Tests.debug.xcconfig"; path = "Target Support Files/Pods-dotLottie_Tests/Pods-dotLottie_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		8C66CA081A4F529300E55CC4 /* Pods-dotLottie_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dotLottie_Tests.release.xcconfig"; path = "Target Support Files/Pods-dotLottie_Tests/Pods-dotLottie_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		94873F1524AEE69E0079CDEE /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		949C664A24AED38F00D656C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		949C664C24AED43500D656C1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		94AF58F624AF36F500F98598 /* RemoteAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAnimationView.swift; sourceTree = "<group>"; };
+		94AF58F824AF3A8000F98598 /* LocalAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAnimationView.swift; sourceTree = "<group>"; };
 		94B097DB24A8355B005C8DB1 /* globe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = globe.json; sourceTree = "<group>"; };
 		94B097DD24A83571005C8DB1 /* lottie.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = lottie.lottie; sourceTree = "<group>"; };
 		CA5A13B21C07C8A64D41DA9C /* Pods-dotLottie_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dotLottie_Example.release.xcconfig"; path = "Target Support Files/Pods-dotLottie_Example/Pods-dotLottie_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -182,7 +184,8 @@
 			isa = PBXGroup;
 			children = (
 				949C664A24AED38F00D656C1 /* ContentView.swift */,
-				94873F1524AEE69E0079CDEE /* ContentViewModel.swift */,
+				94AF58F624AF36F500F98598 /* RemoteAnimationView.swift */,
+				94AF58F824AF3A8000F98598 /* LocalAnimationView.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -377,10 +380,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				94AF58F924AF3A8000F98598 /* LocalAnimationView.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				949C664B24AED38F00D656C1 /* ContentView.swift in Sources */,
+				94AF58F724AF36F500F98598 /* RemoteAnimationView.swift in Sources */,
 				949C664D24AED43500D656C1 /* MainViewController.swift in Sources */,
-				94873F1624AEE69E0079CDEE /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

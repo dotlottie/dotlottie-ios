@@ -9,30 +9,17 @@
 import SwiftUI
 import dotLottie
 
-prefix func !(value: Binding<Bool>) -> Binding<Bool> {
-    return Binding<Bool>(get: { return !value.wrappedValue},
-                         set: { b in value.wrappedValue = b})
-}
-
 struct ContentView: View {
     @State var play: Int = 0
-    @ObservedObject var viewModel: ContentViewModel
     
     var body: some View {
         VStack {
             ScrollView {
                 VStack(spacing: 50) {
-                    ForEach(viewModel.animations) { animation in
-                        VStack {
-                            Text(animation.title)
-                                .font(.headline)
-                            DotLottieView(with: animation.settings, play: self.$play, onCompleted: { completed in
-                                print("\(animation.title) \(completed ? "completed" : "paused")")
-                            }).frame(height:200)
-                        }
-                        .padding(20)
-                        .border(Color.black, width: 1)
-                    }
+                    LocalAnimationView(title: "Local .lottie", name: "lottie", play: $play)
+                    LocalAnimationView(title: "Local .json", name: "globe", play: $play)
+                    RemoteAnimationView(title: "Remote .lottie file", url: URL(string: "https://dotlottie.io/sample_files/animation.lottie")!, play: $play)
+                    RemoteAnimationView(title: "Remote .json file", url: URL(string: "https://assets9.lottiefiles.com/packages/lf20_2gjZuP.json")!, play: $play)
                 }
             }
             Button("Toggle play"){ self.play = self.play == 1 ? 0 : 1 }
@@ -42,6 +29,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(viewModel: ContentViewModel())
+        ContentView()
     }
 }

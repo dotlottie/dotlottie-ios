@@ -13,7 +13,12 @@ public struct DotLottieView: UIViewRepresentable {
         Coordinator(self)
     }
     
-    var settings: DotLottieSettings
+    var name: String?
+    var url: URL?
+    var aspectRatio: UIView.ContentMode = .scaleAspectFit
+    var autoPlay: Bool = false
+    var loopMode: LottieLoopMode = .playOnce
+    var speed: CGFloat = 1
     var completionHandler: LottieCompletionBlock?
     @Binding var play: Int
     
@@ -21,13 +26,50 @@ public struct DotLottieView: UIViewRepresentable {
     
     /// Initializes AnimationView with file name
     /// - Parameters:
-    ///   - settings: animation settings
+    ///   - name: local file name
+    ///   - aspectRatio: Animation Aspect ratio
+    ///   - autoPlay: true for start playing upon setup
+    ///   - loopMode: loop mode
+    ///   - speed: playback speed
     ///   - play: play binding
     ///   - onCompleted: Fired when animation has completed
-    public init(with settings: DotLottieSettings,
+    public init(name: String,
+                aspectRatio: UIView.ContentMode = .scaleAspectFit,
+                autoPlay: Bool = false,
+                loopMode: LottieLoopMode = .playOnce,
+                speed: CGFloat = 1,
                 play: Binding<Int>,
                 onCompleted: LottieCompletionBlock? = nil) {
-        self.settings = settings
+        self.name = name
+        self.aspectRatio = aspectRatio
+        self.autoPlay = autoPlay
+        self.loopMode = loopMode
+        self.speed = speed
+        self._play = play
+        self.completionHandler = onCompleted
+    }
+    
+    /// Initializes AnimationView with url
+    /// - Parameters:
+    ///   - url: local file name
+    ///   - aspectRatio: Animation Aspect ratio
+    ///   - autoPlay: true for start playing upon setup
+    ///   - loopMode: loop mode
+    ///   - speed: playback speed
+    ///   - play: play binding
+    ///   - onCompleted: Fired when animation has completed
+    public init(url: URL,
+                aspectRatio: UIView.ContentMode = .scaleAspectFit,
+                autoPlay: Bool = false,
+                loopMode: LottieLoopMode = .playOnce,
+                speed: CGFloat = 1,
+                play: Binding<Int>,
+                onCompleted: LottieCompletionBlock? = nil) {
+        self.url = url
+        self.aspectRatio = aspectRatio
+        self.autoPlay = autoPlay
+        self.loopMode = loopMode
+        self.speed = speed
         self._play = play
         self.completionHandler = onCompleted
     }
@@ -48,9 +90,9 @@ public struct DotLottieView: UIViewRepresentable {
     public func makeUIView(context: UIViewRepresentableContext<DotLottieView>) -> UIView {
         let view = UIView()
         
-        if let name = settings.name {
+        if let name = name {
             DotLottie.load(name: name, completion: setupAnimationView(_:))
-        } else if let url = settings.url {
+        } else if let url = url {
             DotLottie.load(from: url, completion: setupAnimationView(_:))
         }
 
@@ -70,11 +112,11 @@ public struct DotLottieView: UIViewRepresentable {
     /// - Parameter animation: Lottie Animation
     public func setupAnimationView(_ animation: Lottie.Animation?) {
         animationView.animation = animation
-        animationView.contentMode = settings.aspectRatio
-        animationView.loopMode = settings.loopMode
-        animationView.animationSpeed = settings.speed
+        animationView.contentMode = aspectRatio
+        animationView.loopMode = loopMode
+        animationView.animationSpeed = speed
         
-        if settings.autoPlay {
+        if autoPlay {
             animationView.play(completion: completionHandler)
         }
     }

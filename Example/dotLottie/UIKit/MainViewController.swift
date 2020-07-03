@@ -11,7 +11,7 @@ import SwiftUI
 
 class MainViewController: UIViewController {
     @IBAction func openSwiftUIExamples(_ sender: Any) {
-        let viewController = UIHostingController(rootView: ContentView(viewModel: ContentViewModel()))
+        let viewController = UIHostingController(rootView: ContentView())
         present(viewController, animated: true, completion: nil)
     }
 }
