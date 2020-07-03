@@ -106,7 +106,6 @@
 		8FB420C8BEC39AD4DDD47B1C482A91EB /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D200C0C3635810260599D0A92FD2504 /* unzip.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9231EF29554E256D2C7BAB31B0D0A9BB /* GradientStroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EB35D5F45C998EB53FDDFA28EFC340 /* GradientStroke.swift */; };
 		93F6AF2971CFBCB4CDD3A467F6E76363 /* CompatibleAnimationKeypath.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5827F40AFA532E23921363F13EDB19 /* CompatibleAnimationKeypath.swift */; };
-		94873F1424AEE6500079CDEE /* DotLottieSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94873F1324AEE6500079CDEE /* DotLottieSettings.swift */; };
 		949C664F24AED76F00D656C1 /* DotLottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949C664E24AED76F00D656C1 /* DotLottieView.swift */; };
 		9954ED50C54746F263F72FEF016D7231 /* LRUAnimationCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C098DFD28326B18B87607350F4199D /* LRUAnimationCache.swift */; };
 		99D2615BCE73A8910A27605672ABCB85 /* TextAnimatorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D840EF5DD994D415E8842AB6A63F3F4 /* TextAnimatorNode.swift */; };
@@ -329,7 +328,6 @@
 		8D840EF5DD994D415E8842AB6A63F3F4 /* TextAnimatorNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextAnimatorNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/Text/TextAnimatorNode.swift"; sourceTree = "<group>"; };
 		9341F792FD07A2CC8A1DE7076DD016DB /* PolygonNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PolygonNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/PathNodes/PolygonNode.swift"; sourceTree = "<group>"; };
 		9431AD71A37CAC1B32A32A60CBED899A /* AnimationSubview.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationSubview.swift; path = "lottie-swift/src/Public/iOS/AnimationSubview.swift"; sourceTree = "<group>"; };
-		94873F1324AEE6500079CDEE /* DotLottieSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DotLottieSettings.swift; path = Sources/dotLottie/DotLottieSettings.swift; sourceTree = "<group>"; };
 		949C664E24AED76F00D656C1 /* DotLottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DotLottieView.swift; path = Sources/dotLottie/DotLottieView.swift; sourceTree = "<group>"; };
 		9927CF0C206A742A2D31EBB746BA94B5 /* MathKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MathKit.swift; path = "lottie-swift/src/Private/Utility/Extensions/MathKit.swift"; sourceTree = "<group>"; };
 		99BC3D307730F00CF37639ACD601A113 /* lottie-ios-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "lottie-ios-umbrella.h"; sourceTree = "<group>"; };
@@ -697,7 +695,6 @@
 				6C044FED7961788B49904C762A297E38 /* DotLottieManifest.swift */,
 				101FEC1F7441F5FE57EB25244EEF7651 /* DotLottieUtils.swift */,
 				949C664E24AED76F00D656C1 /* DotLottieView.swift */,
-				94873F1324AEE6500079CDEE /* DotLottieSettings.swift */,
 				6389D602D5E6A147936672BFCA75EA36 /* Pod */,
 				C9E367E50C0F7A7D0A0F07F796BF97FD /* Support Files */,
 			);
@@ -1028,7 +1025,6 @@
 				4B93E8F941010A469A79B18759642C60 /* dotLottie-dummy.m in Sources */,
 				2F4D8B530CB3CD9CBFD540D2B302C9B9 /* DotLottie.swift in Sources */,
 				DC49693A8D8361C62FD83B84F6DBE337 /* DotLottieFile.swift in Sources */,
-				94873F1424AEE6500079CDEE /* DotLottieSettings.swift in Sources */,
 				949C664F24AED76F00D656C1 /* DotLottieView.swift in Sources */,
 				4CD323CE6198C44E0D377AB77C73E1FC /* DotLottieManifest.swift in Sources */,
 				656AC883858FBD6CB3DCDCEEF35D371F /* DotLottieUtils.swift in Sources */,
