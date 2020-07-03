@@ -41,7 +41,8 @@ pod 'dotLottie', :git => 'https://github.com/dotlottie/dotlottie-ios.git'
 import Lottie
 import dotLottie
 ```
-##### Load a local .lottie
+##### Loading from a local file
+
 ```swift
 let animationView = AnimationView()
 
@@ -59,7 +60,8 @@ DotLottie.load(name: "animation") { (animation) in
 }
 ```
 
-##### Load a remote .lottie
+##### Loading a remote file
+
 ```swift
 let animationView = AnimationView()
 
@@ -77,20 +79,42 @@ DotLottie.load(from: URL(string:"https://dotlottie.io/sample_files/animation.lot
 }
 ``` 
 
-##### Load a .lottie using file path
+#### SwiftUI
+
+##### Loading a local file
+
 ```swift
-let animationView = AnimationView()
+import SwiftUI
+import dotLottie
 
-DotLottie.load(from: URL(string:"path/to/file")!){ (animation) in
-    if let animation = animation {
-        self.animationView.animation = animation
-        self.animationView.bounds = CGRect(x: 0, y: 0, width: 300, height: 300)
-        self.animationView.center = self.view.center
+struct LocalAnimationView: View {
+    @State var name: String
+    @State var play: Int = 1
+    
+    var body: some View {
+        DotLottieView(name: name, play: self.$play, onCompleted: { completed in
+            // handle completion
+        })
+        .frame(height:200)
+    }
+}
+``` 
 
-        self.view.addSubview(self.animationView)
-        self.animationView.play()
-    }else{
-       print("Error loading .lottie")
+##### Loading file from a remote source
+
+```swift
+import SwiftUI
+import dotLottie
+
+struct RemoteAnimationView: View {
+    @State var url: URL
+    @State var play: Int = 1
+    
+    var body: some View {
+        DotLottieView(url: url, play: self.$play, onCompleted: { completed in
+            // handle completion
+        })
+        .frame(height:200)
     }
 }
 ``` 
