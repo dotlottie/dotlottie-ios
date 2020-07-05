@@ -8,7 +8,7 @@
 ## Introducing dotLottie
 
 <p align="center">
-  <img src="/_Images/dotLottie_image.png" width="400">
+  <img src="/Example/dotLottie/Assets/Images.xcassets/AppIcon.appiconset/dotLottie2048-1024.png" width="400">
 </p>
 
 dotLottie is an open-source file format that aggregates one or more Lottie files and their associated resources into a single file. They are ZIP archives compressed with the Deflate compression method and carry the file extension of ".lottie".
@@ -26,21 +26,27 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 dotLottie-ios is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
-```ruby
+```swift
 pod 'dotLottie', :git => 'https://github.com/dotlottie/dotlottie-ios.git'
 ```
 
 ### Swift Package Manager
 
-```ruby
-.package(url: "https://github.com/dotlottie/dotlottie-ios.git", from: "0.1.1")
+```swift
+.package(url: "https://github.com/dotlottie/dotlottie-ios.git", from: "0.1.3")
 ```
 
 ## Using dotLottie
-```ruby
+```swift
 import Lottie
 import dotLottie
 ```
+
+##### Enabling log
+```swift
+DotLottie.isLogEnabled = true
+```
+
 ##### Loading from a local file
 
 ```swift
