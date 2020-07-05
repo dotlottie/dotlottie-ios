@@ -38,7 +38,7 @@ public struct DotLottieFile {
     /// - Parameter url: URL to .lottie file
     public init?(url: URL) {
         self.remoteUrl = url
-        self.localUrl = DotLottieUtils.tempDirectoryURL(for: url)
+        self.localUrl = DotLottieUtils.animationsDirectoryURL(for: url)
         
         guard url.isDotLottieFile else { return nil }
         guard decompress(from: url, in: localUrl) else { return nil }
@@ -50,14 +50,20 @@ public struct DotLottieFile {
     ///   - directory: url to destination of decompression contents
     /// - Returns: success true/false
     private func decompress(from url: URL, in directory: URL) -> Bool {
+        guard !url.isFileDecompressed else {
+            DotLottie.log("File already decompressed at \(directory.path)")
+            return true
+        }
+        
         Zip.addCustomFileExtension(DotLottieUtils.dotLottieExtension)
         
         do {
             try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true, attributes: nil)
             try Zip.unzipFile(url, destination: directory, overwrite: true, password: nil)
+            DotLottie.log("File decompressed to \(directory.path)")
             return true
         } catch {
-            print("Extraction of dotLottie archive failed with error: \(error)")
+            DotLottie.log("Extraction of dotLottie archive failed with error: \(error)")
             return false
         }
     }

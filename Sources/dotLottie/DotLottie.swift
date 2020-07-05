@@ -11,6 +11,16 @@ import Lottie
 
 public class DotLottie {
     
+    /// Enables log printing
+    public static var isLogEnabled: Bool = false
+    
+    /// Prints log if enabled
+    /// - Parameter text: Text to log
+    public static func log(_ text: String) {
+        guard isLogEnabled else { return }
+        print("[DotLottie] \(text)")
+    }
+    
     /// Loads animation in bundle with given name
     /// - Parameters:
     ///   - name: name of animation in bundle
@@ -53,13 +63,22 @@ public class DotLottie {
     ///   - completion: Path URL to downloaded file
     public static func download(from url: URL, completion: @escaping (_ path: URL?) -> Void) {
         guard url.isRemoteFile else {
+            DotLottie.log("Not a remote file, trying to read instead [\(url.path)]")
             completion(DotLottieFile(url: url)?.animationUrl ?? url)
             return
         }
         
+        // file is already either downloaded or decompressed, we don't need to proceed
+        guard !url.isFileDecompressed && !url.isFileDownloaded else {
+            DotLottie.log("File is already downloaded or decompressed, trying to read instead [\(url.path)]")
+            completion(DotLottieFile(url: url)?.animationUrl)
+            return
+        }
+        
+        DotLottie.log("Downloading from url: \(url.path)")
         URLSession.shared.dataTask(with: url, completionHandler: { data, response, error in
             guard let data = data else {
-                print("Failed to download data: \(error?.localizedDescription ?? "no description")")
+                DotLottie.log("Failed to download data: \(error?.localizedDescription ?? "no description")")
                 completion(nil)
                 return
             }
@@ -69,9 +88,10 @@ public class DotLottie {
                 let downloadUrl = DotLottieUtils.downloadsDirectoryURL(for: url)
                 try data.write(to: downloadUrl)
                 
+                DotLottie.log("Downloaded file, trying to read")
                 completion(DotLottieFile(url: downloadUrl)?.animationUrl)
             } catch {
-                print("Failed to save downloaded data: \(error.localizedDescription)")
+                DotLottie.log("Failed to save downloaded data: \(error.localizedDescription)")
                 completion(nil)
             }
         }).resume()
@@ -83,7 +103,7 @@ public class DotLottie {
     ///   - completion: Lottie animation
     public static func animation(for url: URL, completion: @escaping (Animation?) -> Void) {
         guard url.isJsonFile else {
-            print("""
+            DotLottie.log("""
                     Not a JSON file, instead use:
                     DotLottieAnimation.load(from: URL, completion: (Animation?) -> Void)
                   """)
