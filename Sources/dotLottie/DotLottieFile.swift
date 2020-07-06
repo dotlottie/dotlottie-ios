@@ -35,22 +35,25 @@ public struct DotLottieFile {
     
     /// Constructor with url.
     /// Returns nil if is not a .lottie file and decompression failed
-    /// - Parameter url: URL to .lottie file
-    public init?(url: URL) {
+    /// - Parameters:
+    ///   - url: URL to .lottie file
+    ///   - cache: Cache type 
+    public init?(url: URL, cache: DotLottieCache) {
         self.remoteUrl = url
         self.localUrl = DotLottieUtils.animationsDirectoryURL(for: url)
         
         guard url.isDotLottieFile else { return nil }
-        guard decompress(from: url, in: localUrl) else { return nil }
+        guard decompress(from: url, in: localUrl, cache: cache) else { return nil }
     }
     
     /// Decompresses .lottie file and saves to local temp folder
     /// - Parameters:
     ///   - url: url to .lottie file
     ///   - directory: url to destination of decompression contents
+    ///   - cache: Cache type   
     /// - Returns: success true/false
-    private func decompress(from url: URL, in directory: URL) -> Bool {
-        guard !url.isFileDecompressed else {
+    private func decompress(from url: URL, in directory: URL, cache: DotLottieCache) -> Bool {
+        guard cache.shouldDownload(from: url) else {
             DotLottie.log("File already decompressed at \(directory.path)")
             return true
         }
