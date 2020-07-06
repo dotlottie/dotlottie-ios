@@ -22,7 +22,7 @@ public enum DotLottieCache {
         case .ignoreCache:
             return url.isRemoteFile
         case .cache:
-            return !url.isFileDownloaded && !url.isFileDecompressed
+            return !url.isFileDownloaded
         }
     }
     

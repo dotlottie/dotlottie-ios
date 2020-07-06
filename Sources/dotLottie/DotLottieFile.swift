@@ -53,7 +53,7 @@ public struct DotLottieFile {
     ///   - cache: Cache type   
     /// - Returns: success true/false
     private func decompress(from url: URL, in directory: URL, cache: DotLottieCache) -> Bool {
-        guard cache.shouldDownload(from: url) else {
+        guard cache.shouldDecompress(from: url) else {
             DotLottie.log("File already decompressed at \(directory.path)")
             return true
         }
