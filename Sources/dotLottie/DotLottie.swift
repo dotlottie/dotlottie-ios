@@ -64,7 +64,7 @@ public class DotLottie {
         // file is already either downloaded or decompressed, we don't need to proceed
         guard cache.shouldDownload(from: url) else {
             DotLottie.log("Skipping download for [\(url.lastPathComponent)], trying to read instead")
-            completion(DotLottieFile(url: url, cache: cache)?.animationUrl ?? url)
+            completion(DotLottieFile(url: DotLottieUtils.downloadsDirectoryURL(for: url), cache: cache)?.animationUrl ?? url)
             return
         }
         

@@ -14,23 +14,26 @@ public struct DotLottieFile {
     public let remoteUrl: URL
     public let localUrl: URL
     
+    public static let manifestFileName: String = "manifest.json"
+    public static let animationsFolderName: String = "animations"
+    public static let imagesFolderName: String = "images"
+    
     /// Manifest.json file loading
     public var manifest: DotLottieManifest? {
-        let manifestfile = "manifest.json"
-        let path = localUrl.appendingPathComponent(manifestfile)
+        let path = localUrl.appendingPathComponent(DotLottieFile.manifestFileName)
         return try? DotLottieManifest.load(from: path)
     }
     
     /// Animation url for main animation
     public var animationUrl: URL? {
         guard let animationId = manifest?.animations.first?.id else { return nil }
-        let dotLottieJson = "animations/\(animationId).json"
+        let dotLottieJson = "\(DotLottieFile.animationsFolderName)/\(animationId).json"
         return localUrl.appendingPathComponent(dotLottieJson)
     }
     
     /// Animation images folder url
     public var imagesUrl: URL? {
-        return localUrl.appendingPathComponent("images/")
+        return localUrl.appendingPathComponent("\(DotLottieFile.imagesFolderName)/")
     }
     
     /// Constructor with url.
