@@ -21,14 +21,19 @@ public struct DotLottieUtils {
         return URL(fileURLWithPath: NSTemporaryDirectory())
     }
     
-    /// Returns url temp foder with animation name
-    /// - Parameter url: Animation url
-    /// - Returns: url to animation temp folder
-    public static func tempDirectoryURL(for url: URL) -> URL {
-        return tempDirectoryURL.appendingPathComponent(url.lastPathComponent)
+    /// Temp animations folder
+    public static var animationsDirectoryURL: URL {
+        DotLottieUtils.tempDirectoryURL.appendingPathComponent("animations")
     }
     
-    /// Temp downloads folder to app directory
+    /// Returns url for animations foder with animation name
+    /// - Parameter url: Animation url
+    /// - Returns: url to animation temp folder
+    public static func animationsDirectoryURL(for url: URL) -> URL {
+        return animationsDirectoryURL.appendingPathComponent(url.lastPathComponent)
+    }
+    
+    /// Temp downloads folder
     public static var downloadsDirectoryURL: URL {
         DotLottieUtils.tempDirectoryURL.appendingPathComponent("downloads")
     }
@@ -64,6 +69,24 @@ extension URL {
     /// Checks if url is a json file
     var isJsonFile: Bool {
         return pathExtension == DotLottieUtils.jsonExtension
+    }
+    
+    /// Checks if url has already been downloaded
+    var isFileDownloaded: Bool {
+        let url = DotLottieUtils.downloadsDirectoryURL(for: self)
+        return FileManager.default.fileExists(atPath: url.path)
+    }
+    
+    /// Checks if url has been decompressed
+    var isFileDecompressed: Bool {
+        let url = DotLottieUtils.animationsDirectoryURL(for: self)
+            .appendingPathComponent(DotLottieFile.animationsFolderName)
+        var isDirectory: ObjCBool = false
+        if FileManager.default.fileExists(atPath: url.path, isDirectory: &isDirectory) {
+            return isDirectory.boolValue
+        }
+        
+        return false
     }
     
     /// Checks if file is remote

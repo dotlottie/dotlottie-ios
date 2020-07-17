@@ -19,7 +19,7 @@ struct RemoteAnimationView: View {
             Text(title).font(.headline)
             
             DotLottieView(url: url, play: self.$play, onCompleted: { completed in
-                print("\(self.title) \(completed ? "completed" : "paused")")
+                DotLottie.log("\(self.title) \(completed ? "completed" : "paused")")
             }).frame(height:200)
         }
         .padding(20)
