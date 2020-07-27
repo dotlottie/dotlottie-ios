@@ -33,7 +33,7 @@ pod 'dotLottie', :git => 'https://github.com/dotlottie/dotlottie-ios.git'
 ### Swift Package Manager
 
 ```swift
-.package(url: "https://github.com/dotlottie/dotlottie-ios.git", from: "0.1.3")
+.package(url: "https://github.com/dotlottie/dotlottie-ios.git", from: "0.1.4")
 ```
 
 ## Using dotLottie
@@ -126,11 +126,6 @@ struct RemoteAnimationView: View {
 ``` 
 
 ## Author
-
-[whit3hawks](https://twitter.com/whit3hawks) <br />
-[Sofwath](https://twitter.com/sofwath)
-
-## Contributor
 
 [Evandro Harrison Hoffmann](https://github.com/eharrison) | evandro.hoffmann@gmail.com
 

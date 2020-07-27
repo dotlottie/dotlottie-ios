@@ -106,6 +106,6 @@ public class DotLottie {
         
         Animation.loadedFrom(url: url, closure: { (animation) in
             completion(animation)
-        }, animationCache: .none)
+        }, animationCache: LRUAnimationCache.sharedCache)
     }
 }
