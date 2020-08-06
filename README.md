@@ -19,6 +19,13 @@ dotLottie is an open-source file format that aggregates one or more Lottie files
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+## Requirements
+
+- Swift 5.0
+- iOS 9
+- macOS 10.12
+- tvOS 9.0
+
 ## Installation
 
 ### Cocoapods
