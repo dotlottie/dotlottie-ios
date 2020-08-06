@@ -91,9 +91,9 @@ public struct DotLottieView: UIViewRepresentable {
         let view = UIView()
         
         if let name = name {
-            DotLottie.load(name: name, completion: setupAnimationView(_:))
+            dotLottie.load(name: name, completion: setupAnimationView(_:))
         } else if let url = url {
-            DotLottie.load(from: url, completion: setupAnimationView(_:))
+            dotLottie.load(from: url, completion: setupAnimationView(_:))
         }
 
         animationView.translatesAutoresizingMaskIntoConstraints = false

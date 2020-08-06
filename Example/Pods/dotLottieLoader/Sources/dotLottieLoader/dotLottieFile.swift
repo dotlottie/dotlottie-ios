@@ -10,7 +10,7 @@ import Foundation
 import Zip
 
 /// Detailed .lottie file structure
-public struct DotLottieFile {
+public struct dotLottieFile {
     public let remoteUrl: URL
     public let localUrl: URL
     
@@ -19,21 +19,21 @@ public struct DotLottieFile {
     public static let imagesFolderName: String = "images"
     
     /// Manifest.json file loading
-    public var manifest: DotLottieManifest? {
-        let path = localUrl.appendingPathComponent(DotLottieFile.manifestFileName)
-        return try? DotLottieManifest.load(from: path)
+    public var manifest: dotLottieManifest? {
+        let path = localUrl.appendingPathComponent(dotLottieFile.manifestFileName)
+        return try? dotLottieManifest.load(from: path)
     }
     
     /// Animation url for main animation
     public var animationUrl: URL? {
         guard let animationId = manifest?.animations.first?.id else { return nil }
-        let dotLottieJson = "\(DotLottieFile.animationsFolderName)/\(animationId).json"
+        let dotLottieJson = "\(dotLottieFile.animationsFolderName)/\(animationId).json"
         return localUrl.appendingPathComponent(dotLottieJson)
     }
     
     /// Animation images folder url
     public var imagesUrl: URL? {
-        return localUrl.appendingPathComponent("\(DotLottieFile.imagesFolderName)/")
+        return localUrl.appendingPathComponent("\(dotLottieFile.imagesFolderName)/")
     }
     
     /// Constructor with url.
@@ -41,9 +41,9 @@ public struct DotLottieFile {
     /// - Parameters:
     ///   - url: URL to .lottie file
     ///   - cache: Cache type 
-    public init?(url: URL, cache: DotLottieCache) {
+    public init?(url: URL, cache: dotLottieCache) {
         self.remoteUrl = url
-        self.localUrl = DotLottieUtils.animationsDirectoryURL(for: url)
+        self.localUrl = dotLottieUtils.animationsDirectoryURL(for: url)
         
         guard url.isDotLottieFile else { return nil }
         guard decompress(from: url, in: localUrl, cache: cache) else { return nil }
@@ -55,21 +55,21 @@ public struct DotLottieFile {
     ///   - directory: url to destination of decompression contents
     ///   - cache: Cache type   
     /// - Returns: success true/false
-    private func decompress(from url: URL, in directory: URL, cache: DotLottieCache) -> Bool {
+    private func decompress(from url: URL, in directory: URL, cache: dotLottieCache) -> Bool {
         guard cache.shouldDecompress(from: url) else {
-            DotLottie.log("File already decompressed at \(directory.path)")
+            dotLottieUtils.log("File already decompressed at \(directory.path)")
             return true
         }
         
-        Zip.addCustomFileExtension(DotLottieUtils.dotLottieExtension)
+        Zip.addCustomFileExtension(dotLottieUtils.dotLottieExtension)
         
         do {
             try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true, attributes: nil)
             try Zip.unzipFile(url, destination: directory, overwrite: true, password: nil)
-            DotLottie.log("File decompressed to \(directory.path)")
+            dotLottieUtils.log("File decompressed to \(directory.path)")
             return true
         } catch {
-            DotLottie.log("Extraction of dotLottie archive failed with error: \(error)")
+            dotLottieUtils.log("Extraction of dotLottie archive failed with error: \(error)")
             return false
         }
     }

@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         // replace DotLottie.load(from: URL(string:"")!)
         // with DotLottie.load(name: "pushups")
         
-        DotLottie.load(from: URL(string:"https://dotlottie.io/sample_files/animation.lottie")!) { [weak self] (animation) in
+        dotLottie.load(from: URL(string:"https://dotlottie.io/sample_files/animation.lottie")!) { [weak self] (animation) in
             guard let animation = animation else {
                 print("Error loading animation")
                 return
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
             self?.setupAnimation(animation, title: "Remote .lottie file")
         }
         
-        DotLottie.load(from: URL(string:"https://assets9.lottiefiles.com/packages/lf20_2gjZuP.json")!) { [weak self] (animation) in
+        dotLottie.load(from: URL(string:"https://assets9.lottiefiles.com/packages/lf20_2gjZuP.json")!) { [weak self] (animation) in
             guard let animation = animation else {
                 print("Error loading animation")
                 return
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
             self?.setupAnimation(animation, title: "Remote JSON file")
         }
         
-        DotLottie.load(name: "lottie") { [weak self] (animation) in
+        dotLottie.load(name: "lottie") { [weak self] (animation) in
             guard let animation = animation else {
                 print("Error loading animation")
                 return
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
             self?.setupAnimation(animation, title: "Local .lottie file")
         }
         
-        DotLottie.load(name: "globe") { [weak self] (animation) in
+        dotLottie.load(name: "globe") { [weak self] (animation) in
             guard let animation = animation else {
                 print("Error loading animation")
                 return

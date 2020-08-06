@@ -7,7 +7,7 @@ let package = Package(
     name: "dotLottie",
     platforms: [
         .iOS(.v9),
-        .macOS(.v10_10),
+        .macOS(.v10_12),
         .tvOS(.v9)
     ],
     products: [
@@ -17,7 +17,7 @@ let package = Package(
     ],
     dependencies: [
         .package(name: "Lottie", url: "https://github.com/airbnb/lottie-ios.git", from: "3.1.5"),
-        .package(name: "Zip", url: "https://github.com/marmelroy/Zip.git", from: "2.0.0"),
+        .package(name: "dotLottie", url: "https://github.com/marmelroy/Zip.git", from: "2.0.0"),
     ],
     targets: [
         .target(

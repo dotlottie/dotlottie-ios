@@ -8,9 +8,19 @@
 
 import Foundation
 
-public struct DotLottieUtils {
+public struct dotLottieUtils {
     public static let dotLottieExtension = "lottie"
     public static let jsonExtension = "json"
+    
+    /// Enables log printing
+    public static var isLogEnabled: Bool = false
+    
+    /// Prints log if enabled
+    /// - Parameter text: Text to log
+    public static func log(_ text: String) {
+        guard isLogEnabled else { return }
+        print("[dotLottie] \(text)")
+    }
     
     /// Temp folder to app directory
     public static var tempDirectoryURL: URL {
@@ -23,7 +33,7 @@ public struct DotLottieUtils {
     
     /// Temp animations folder
     public static var animationsDirectoryURL: URL {
-        DotLottieUtils.tempDirectoryURL.appendingPathComponent("animations")
+        dotLottieUtils.tempDirectoryURL.appendingPathComponent("animations")
     }
     
     /// Returns url for animations foder with animation name
@@ -35,14 +45,14 @@ public struct DotLottieUtils {
     
     /// Temp downloads folder
     public static var downloadsDirectoryURL: URL {
-        DotLottieUtils.tempDirectoryURL.appendingPathComponent("downloads")
+        dotLottieUtils.tempDirectoryURL.appendingPathComponent("downloads")
     }
     
     /// Returns temp download url for file
     /// - Parameter url: Animation url
     /// - Returns: url to animation temp folder
     public static func downloadsDirectoryURL(for url: URL) -> URL {
-        DotLottieUtils.downloadsDirectoryURL.appendingPathComponent(url.lastPathComponent)
+        dotLottieUtils.downloadsDirectoryURL.appendingPathComponent(url.lastPathComponent)
     }
     
     /// Returns url to file in local bundle with given name
@@ -62,25 +72,25 @@ public struct DotLottieUtils {
 extension URL {
     
     /// Checks if url is a lottie file
-    var isDotLottieFile: Bool {
-        return pathExtension == DotLottieUtils.dotLottieExtension
+    public var isDotLottieFile: Bool {
+        return pathExtension == dotLottieUtils.dotLottieExtension
     }
     
     /// Checks if url is a json file
-    var isJsonFile: Bool {
-        return pathExtension == DotLottieUtils.jsonExtension
+    public var isJsonFile: Bool {
+        return pathExtension == dotLottieUtils.jsonExtension
     }
     
     /// Checks if url has already been downloaded
-    var isFileDownloaded: Bool {
-        let url = DotLottieUtils.downloadsDirectoryURL(for: self)
+    public var isLottieFileDownloaded: Bool {
+        let url = dotLottieUtils.downloadsDirectoryURL(for: self)
         return FileManager.default.fileExists(atPath: url.path)
     }
     
     /// Checks if url has been decompressed
-    var isFileDecompressed: Bool {
-        let url = DotLottieUtils.animationsDirectoryURL(for: self)
-            .appendingPathComponent(DotLottieFile.animationsFolderName)
+    public var isLottieFileDecompressed: Bool {
+        let url = dotLottieUtils.animationsDirectoryURL(for: self)
+            .appendingPathComponent(dotLottieFile.animationsFolderName)
         var isDirectory: ObjCBool = false
         if FileManager.default.fileExists(atPath: url.path, isDirectory: &isDirectory) {
             return isDirectory.boolValue
@@ -90,7 +100,7 @@ extension URL {
     }
     
     /// Checks if file is remote
-    var isRemoteFile: Bool {
+    public var isRemoteFile: Bool {
         return absoluteString.contains("http")
     }
 }
