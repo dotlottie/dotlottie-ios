@@ -8,11 +8,19 @@
 import Foundation
 import CoreGraphics
 import Lottie
+import dotLottieLoader
 
-public class DotLottie {
+public class dotLottie {
     
     /// Enables log printing
-    public static var isLogEnabled: Bool = false
+    public static var isLogEnabled: Bool {
+        get {
+            dotLottieUtils.isLogEnabled
+        }
+        set {
+            dotLottieUtils.isLogEnabled = newValue
+        }
+    }
     
     /// Prints log if enabled
     /// - Parameter text: Text to log
@@ -26,11 +34,13 @@ public class DotLottie {
     ///   - name: name of animation in bundle
     ///   - cache: Cache type   
     ///   - completion: Lottie Animation
-    public static func load(name: String, cache: DotLottieCache = .cache, completion: @escaping (Animation?) -> Void) {
-        if let url = DotLottieUtils.bundleURL(for: name) {
-            animation(for: DotLottieFile(url: url, cache: cache)?.animationUrl ?? url, completion: completion)
-        } else {
-            completion(nil)
+    public static func load(name: String, cache: dotLottieCache = .cache, completion: @escaping (Animation?) -> Void) {
+        dotLottieLoader.load(name: name, cache: cache) { (dotLottieFile) in
+            guard let url = dotLottieFile?.animationUrl ?? dotLottieUtils.bundleURL(for: name) else {
+                completion(nil)
+                return
+            }
+            animation(for: url, completion: completion)
         }
     }
     
@@ -41,53 +51,10 @@ public class DotLottie {
     ///   - url: url to load animation from
     ///   - cache: Cache type
     ///   - completion: Lottie Animation
-    public static func load(from url: URL, cache: DotLottieCache = .cache, completion: @escaping (Animation?) -> Void) {
-        if url.isDotLottieFile {
-            download(from: url, cache: cache) { (path) in
-                guard let path = path else {
-                    completion(nil)
-                    return
-                }
-                self.animation(for: path, completion: completion)
-            }
-        } else {
-            animation(for: url, completion: completion)
+    public static func load(from url: URL, cache: dotLottieCache = .cache, completion: @escaping (Animation?) -> Void) {
+        dotLottieLoader.load(from: url, cache: cache) { (dotLottieFile) in
+            animation(for: dotLottieFile?.animationUrl ?? url, completion: completion)
         }
-    }
-    
-    /// Downloads file from given URL and save in local app temp folder
-    /// - Parameters:
-    ///   - url: remote url to download file from
-    ///   - cache: Cache type
-    ///   - completion: Path URL to downloaded file
-    public static func download(from url: URL, cache: DotLottieCache, completion: @escaping (_ path: URL?) -> Void) {
-        // file is already either downloaded or decompressed, we don't need to proceed
-        guard cache.shouldDownload(from: url) else {
-            DotLottie.log("Skipping download for [\(url.lastPathComponent)], trying to read instead")
-            completion(DotLottieFile(url: DotLottieUtils.downloadsDirectoryURL(for: url), cache: cache)?.animationUrl ?? url)
-            return
-        }
-        
-        DotLottie.log("Downloading from url: \(url.path)")
-        URLSession.shared.dataTask(with: url, completionHandler: { data, response, error in
-            guard let data = data else {
-                DotLottie.log("Failed to download data: \(error?.localizedDescription ?? "no description")")
-                completion(nil)
-                return
-            }
-            
-            do {
-                try FileManager.default.createDirectory(at: DotLottieUtils.downloadsDirectoryURL, withIntermediateDirectories: true, attributes: nil)
-                let downloadUrl = DotLottieUtils.downloadsDirectoryURL(for: url)
-                try data.write(to: downloadUrl)
-                
-                DotLottie.log("Downloaded file, trying to read")
-                completion(DotLottieFile(url: downloadUrl, cache: cache)?.animationUrl)
-            } catch {
-                DotLottie.log("Failed to save downloaded data: \(error.localizedDescription)")
-                completion(nil)
-            }
-        }).resume()
     }
     
     /// Loads Lottie animation with url to JSON file
@@ -96,7 +63,7 @@ public class DotLottie {
     ///   - completion: Lottie animation
     public static func animation(for url: URL, completion: @escaping (Animation?) -> Void) {
         guard url.isJsonFile else {
-            DotLottie.log("""
+            dotLottieUtils.log("""
                     Not a JSON file, instead use:
                     DotLottieAnimation.load(from: URL, completion: (Animation?) -> Void)
                   """)
