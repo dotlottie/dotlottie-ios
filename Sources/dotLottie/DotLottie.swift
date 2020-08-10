@@ -15,10 +15,10 @@ public class DotLottie {
     /// Enables log printing
     public static var isLogEnabled: Bool {
         get {
-            dotLottieUtils.isLogEnabled
+            DotLottieUtils.isLogEnabled
         }
         set {
-            dotLottieUtils.isLogEnabled = newValue
+            DotLottieUtils.isLogEnabled = newValue
         }
     }
     
@@ -34,9 +34,10 @@ public class DotLottie {
     ///   - name: name of animation in bundle
     ///   - cache: Cache type   
     ///   - completion: Lottie Animation
-    public static func load(name: String, cache: dotLottieCache = .cache, completion: @escaping (Animation?) -> Void) {
-        dotLottieLoader.load(name: name, cache: cache) { (dotLottieFile) in
-            guard let url = dotLottieFile?.animationUrl ?? dotLottieUtils.bundleURL(for: name) else {
+    public static func load(name: String, cache:
+        DotLottieCache = .cache, completion: @escaping (Animation?) -> Void) {
+        DotLottieLoader.load(name: name, cache: cache) { (dotLottieFile) in
+            guard let url = dotLottieFile?.animationUrl ?? DotLottieUtils.bundleURL(for: name) else {
                 completion(nil)
                 return
             }
@@ -51,8 +52,8 @@ public class DotLottie {
     ///   - url: url to load animation from
     ///   - cache: Cache type
     ///   - completion: Lottie Animation
-    public static func load(from url: URL, cache: dotLottieCache = .cache, completion: @escaping (Animation?) -> Void) {
-        dotLottieLoader.load(from: url, cache: cache) { (dotLottieFile) in
+    public static func load(from url: URL, cache: DotLottieCache = .cache, completion: @escaping (Animation?) -> Void) {
+        DotLottieLoader.load(from: url, cache: cache) { (dotLottieFile) in
             animation(for: dotLottieFile?.animationUrl ?? url, completion: completion)
         }
     }
@@ -63,7 +64,7 @@ public class DotLottie {
     ///   - completion: Lottie animation
     public static func animation(for url: URL, completion: @escaping (Animation?) -> Void) {
         guard url.isJsonFile else {
-            dotLottieUtils.log("""
+            DotLottieUtils.log("""
                     Not a JSON file, instead use:
                     DotLottieAnimation.load(from: URL, completion: (Animation?) -> Void)
                   """)

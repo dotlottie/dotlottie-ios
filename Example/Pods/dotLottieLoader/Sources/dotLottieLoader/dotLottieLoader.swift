@@ -7,16 +7,16 @@
 //
 import Foundation
 
-public class dotLottieLoader {
+public class DotLottieLoader {
     
     /// Loads JSON in bundle with given name
     /// - Parameters:
     ///   - name: name of animation in bundle
     ///   - cache: Cache type
     ///   - completion: dotLottieFile
-    public static func load(name: String, cache: dotLottieCache = .cache, completion: @escaping (dotLottieFile?) -> Void) {
-        if let url = dotLottieUtils.bundleURL(for: name) {
-            completion(dotLottieFile(url: url, cache: cache))
+    public static func load(name: String, cache: DotLottieCache = .cache, completion: @escaping (DotLottieFile?) -> Void) {
+        if let url = DotLottieUtils.bundleURL(for: name) {
+            completion(DotLottieFile(url: url, cache: cache))
         } else {
             completion(nil)
         }
@@ -29,13 +29,13 @@ public class dotLottieLoader {
     ///   - url: url to load animation from
     ///   - cache: Cache type
     ///   - completion: dotLottieFile
-    public static func load(from url: URL, cache: dotLottieCache = .cache, completion: @escaping (dotLottieFile?) -> Void) {
+    public static func load(from url: URL, cache: DotLottieCache = .cache, completion: @escaping (DotLottieFile?) -> Void) {
         if url.isDotLottieFile {
             download(from: url, cache: cache) { (dotLottieFile) in
                 completion(dotLottieFile)
             }
         } else {
-            dotLottieUtils.log("Not a dotLottieFile")
+            DotLottieUtils.log("Not a dotLottieFile")
             completion(nil)
         }
     }
@@ -45,31 +45,31 @@ public class dotLottieLoader {
     ///   - url: remote url to download file from
     ///   - cache: Cache type
     ///   - completion: dotLottieFile
-    public static func download(from url: URL, cache: dotLottieCache, completion: @escaping (dotLottieFile?) -> Void) {
+    public static func download(from url: URL, cache: DotLottieCache, completion: @escaping (DotLottieFile?) -> Void) {
         // file is already either downloaded or decompressed, we don't need to proceed
         guard cache.shouldDownload(from: url) else {
-            dotLottieUtils.log("Skipping download for [\(url.lastPathComponent)], trying to read instead")
-            completion(dotLottieFile(url: dotLottieUtils.downloadsDirectoryURL(for: url), cache: cache))
+            DotLottieUtils.log("Skipping download for [\(url.lastPathComponent)], trying to read instead")
+            completion(DotLottieFile(url: DotLottieUtils.downloadsDirectoryURL(for: url), cache: cache))
             return
         }
         
-        dotLottieUtils.log("Downloading from url: \(url.path)")
+        DotLottieUtils.log("Downloading from url: \(url.path)")
         URLSession.shared.dataTask(with: url, completionHandler: { data, response, error in
             guard let data = data else {
-                dotLottieUtils.log("Failed to download data: \(error?.localizedDescription ?? "no description")")
+                DotLottieUtils.log("Failed to download data: \(error?.localizedDescription ?? "no description")")
                 completion(nil)
                 return
             }
             
             do {
-                try FileManager.default.createDirectory(at: dotLottieUtils.downloadsDirectoryURL, withIntermediateDirectories: true, attributes: nil)
-                let downloadUrl = dotLottieUtils.downloadsDirectoryURL(for: url)
+                try FileManager.default.createDirectory(at: DotLottieUtils.downloadsDirectoryURL, withIntermediateDirectories: true, attributes: nil)
+                let downloadUrl = DotLottieUtils.downloadsDirectoryURL(for: url)
                 try data.write(to: downloadUrl)
                 
-                dotLottieUtils.log("Downloaded file, trying to read")
-                completion(dotLottieFile(url: downloadUrl, cache: cache))
+                DotLottieUtils.log("Downloaded file, trying to read")
+                completion(DotLottieFile(url: downloadUrl, cache: cache))
             } catch {
-                dotLottieUtils.log("Failed to save downloaded data: \(error.localizedDescription)")
+                DotLottieUtils.log("Failed to save downloaded data: \(error.localizedDescription)")
                 completion(nil)
             }
         }).resume()

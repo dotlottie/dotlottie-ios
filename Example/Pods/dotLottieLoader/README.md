@@ -23,6 +23,14 @@ dotLottieLoader is a library to help downloading and deflating a .lottie file, g
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+## Requirements
+
+- Swift 5.0
+- iOS 9
+- macOS 10.12
+- tvOS 9.0
+- watchOS 6.0
+
 ## Installation
 
 ### Cocoapods
@@ -37,7 +45,7 @@ pod 'dotLottieLoader', :git => 'https://github.com/dotlottie/dotlottieLoader-ios
 ### Swift Package Manager
 
 ```swift
-.package(url: "https://github.com/dotlottie/dotLottieLoader-ios.git", from: "0.1.4")
+.package(url: "https://github.com/dotlottie/dotLottieLoader-ios.git", from: "0.1.0")
 ```
 
 ## Using dotLottie
@@ -47,13 +55,13 @@ import dotLottieLoader
 
 ##### Enabling log
 ```swift
-dotLottieUtils.isLogEnabled = true
+DotLottieUtils.isLogEnabled = true
 ```
 
 ##### Loading from a local file
 
 ```swift
-dotLottieLoader.load(name: "animation") { (dotLottieFile) in
+DotLottieLoader.load(name: "animation") { (dotLottieFile) in
     // use dotLottieLoader.animationUrl to load the lottie animation as you normally would
 }
 ```
@@ -61,7 +69,7 @@ dotLottieLoader.load(name: "animation") { (dotLottieFile) in
 ##### Loading a remote file
 
 ```swift
-dotLottieLoader.load(from: URL(string:"https://dotlottie.io/sample_files/animation.lottie")!){ (dotLottieFile) in
+DotLottieLoader.load(from: URL(string:"https://dotlottie.io/sample_files/animation.lottie")!){ (dotLottieFile) in
     // use dotLottieLoader.animationUrl to load the lottie animation as you normally would
 }
 ``` 

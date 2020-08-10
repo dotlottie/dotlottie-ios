@@ -3,7 +3,7 @@ use_frameworks!
 target 'dotLottie_Example' do
   platform :ios, '9.0'
   pod 'dotLottie', :path => '../'
-  pod 'dotLottieLoader', git: 'https://github.com/eharrison/dotLottieLoader'
+  pod 'dotLottieLoader', git: 'https://github.com/dotlottie/dotLottieLoader-ios'
 
   target 'dotLottie_Tests' do
     inherit! :search_paths

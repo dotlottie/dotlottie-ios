@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum dotLottieCache {
+public enum DotLottieCache {
     /// ignores any existing cache and download/decompress again
     case ignoreCache
     

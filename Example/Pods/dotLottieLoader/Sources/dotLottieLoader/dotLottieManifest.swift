@@ -9,7 +9,7 @@
 import Foundation
 
 /// Manifest model for .lottie File
-public struct dotLottieManifest: Decodable {
+public struct DotLottieManifest: Decodable {
     public var animations: [DotLottieAnimation]
     public var version: String
     public var author: String
@@ -19,14 +19,14 @@ public struct dotLottieManifest: Decodable {
     /// - Parameter data: Data to decode
     /// - Throws: Error
     /// - Returns: .lottie Manifest model
-    public static func decode(from data: Data) throws -> dotLottieManifest? {
-        return try? JSONDecoder().decode(dotLottieManifest.self, from: data)
+    public static func decode(from data: Data) throws -> DotLottieManifest? {
+        return try? JSONDecoder().decode(DotLottieManifest.self, from: data)
     }
 
     /// Loads manifest from given URL
     /// - Parameter path: URL path to Manifest
     /// - Returns: Manifest Model
-    public static func load(from url: URL) throws -> dotLottieManifest? {
+    public static func load(from url: URL) throws -> DotLottieManifest? {
         guard let data = try? Data(contentsOf: url) else { return nil }
         return try? decode(from: data)
     }
