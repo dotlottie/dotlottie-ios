@@ -10,7 +10,7 @@ import CoreGraphics
 import Lottie
 import dotLottieLoader
 
-public class dotLottie {
+public class DotLottie {
     
     /// Enables log printing
     public static var isLogEnabled: Bool {

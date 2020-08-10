@@ -28,7 +28,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/eharrison/dotLottieLoader
 
 SPEC CHECKSUMS:
-  dotLottie: 36c3f03661b881bf75df51165cbc89b8ad019842
+  dotLottie: 29045f1762b277f6aac0611ab764e611dd71e6eb
   dotLottieLoader: a34c06496a4753199c2e00b50cb68fd20d656390
   lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
   Zip: 8877eede3dda76bcac281225c20e71c25270774c

@@ -16,6 +16,7 @@
 		0CA18C32575FA6FC525F8DD19E4159A4 /* lottie-ios-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 322B72F9ED974609ED7E2DDDF018984E /* lottie-ios-dummy.m */; };
 		0CC8978582467208CBC03B7D6EF01DFD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 697C8BD4A5BCE955E44F34E0B625E0E8 /* CoreGraphics.framework */; };
 		0D29504E5A45454CD4EE3985318A9404 /* GradientFillRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731E7D8BA8649928778D5FFF568A68CC /* GradientFillRenderer.swift */; };
+		0F81F437175CF216E6B48A75B0ECA930 /* dotLottie-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA7C2E9DC0E5458DDCD213ECA6F3C48 /* dotLottie-dummy.m */; };
 		169317C1DA1ED13F0F2E51F27D19D7BD /* dotLottieLoader-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E762B3469CCCCABCB6ECCC7180FC4FAA /* dotLottieLoader-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1742335B5AA684E0721B2F4714B66C9B /* ShapeRenderLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A026DB758D415175127FF3C668D5FAB /* ShapeRenderLayer.swift */; };
 		199C363307AAB5BDD862BA26D162DB8F /* Stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1808F6B917769B7D7E794D65DD01905D /* Stroke.swift */; };
@@ -65,7 +66,7 @@
 		645177721D55C33A95BDB50A00A20AF1 /* CompatibleAnimationKeypath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1AFC862A4E02EA734A1B27A98055D /* CompatibleAnimationKeypath.swift */; };
 		653B489882F154CF089B510A2001245C /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A7ECAF9464C204A5C51551CDC14AE1F /* unzip.c */; };
 		6591CB0A7D7ED693EA62F01D09BEEED2 /* AnyValueContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D02667ABB0758688EF517F4C096AE2 /* AnyValueContainer.swift */; };
-		664B1B295AC3FFE76A1824CAEC29AF82 /* dotLottie-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 18BBFCAEF8B84F60AEA1E4F0A7A4B20B /* dotLottie-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		664B1B295AC3FFE76A1824CAEC29AF82 /* dotLottie-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BE694E8072D5B6A364BB10DBC6D7D1DB /* dotLottie-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		680DAE5157A9B8095E3F7563950837E6 /* PointValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A1260AF030DE75D7D2C50A32E0D4B /* PointValueProvider.swift */; };
 		6AB2BFABF55F373C862ED8AA238D8FF1 /* DashPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF259EF93F52CF405F5A2FD8F7493206 /* DashPattern.swift */; };
 		6BAF69E308FE52517B34221D3097F66B /* KeyedDecodingContainerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF3EA7DF69CB08EA2582DD9A97989FC /* KeyedDecodingContainerExtensions.swift */; };
@@ -84,6 +85,7 @@
 		80197F3AF25502182E154700ADA9483C /* ShapeLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009BB0E1E433C4675BB96D352A6376B7 /* ShapeLayerModel.swift */; };
 		818F2E8573B320D651A6E902FE73DFA0 /* LayerTransformNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEC3199ED8BC918A5D3B2B905C0701E /* LayerTransformNode.swift */; };
 		81F8EAAA4F63F93ED33B536B7FA46A11 /* AnimationKeypath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F91A23ABC1A0281AAF8CE87E5ED6025 /* AnimationKeypath.swift */; };
+		842247FB8AA6359AB52D0F1C59E73F4C /* DotLottie.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EEBFCBC0F6AF7D6270C319CFAFD11C /* DotLottie.swift */; };
 		8559BD5536EAA220E541A46ADAFB4E86 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2A285FC892D64622BCC692FE16032E /* Foundation.framework */; };
 		869FED4D0839FEA14BC14F1A2B2069BF /* dotLottieLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E5130EAF2E8029C05AD7E6F7544930 /* dotLottieLoader.framework */; };
 		8823E3B2CA15E4774797BE1CF330B338 /* ZipUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5E6D908267E5CD8D28DE463440A772 /* ZipUtilities.swift */; };
@@ -95,7 +97,6 @@
 		926D5A486B4B147E64ECFA3B2B51D2E1 /* AnimatedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DEB81CC115EB07E0FEF42A954BF070 /* AnimatedButton.swift */; };
 		9943980CBA6B816DF44E5F67BF52C9A2 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EEF39DAA989D4BE9FBAF67C4716B73 /* Rectangle.swift */; };
 		9ABA4A1CD332E3BB3027E4C7A58881E0 /* Repeater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54538A7D654999986A14CD71CA1D62 /* Repeater.swift */; };
-		9B592FA6FB140A925EE2DA644AA1D75C /* dotLottie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9D0B06DAF14B53E20AC21461B5EFA4 /* dotLottie.swift */; };
 		9BB08F28024F03AD2CC12B826154C335 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2A285FC892D64622BCC692FE16032E /* Foundation.framework */; };
 		9BEAE4850E87A57581C3859D5259ADF5 /* AnimationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853AC0B273CE26CCB5A58A8B54D0F0DE /* AnimationContext.swift */; };
 		9C368A7A33571EE6119126EF70DB8B91 /* QuickZip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207AE8ECDA9426920BE38FA6F706A67F /* QuickZip.swift */; };
@@ -142,6 +143,7 @@
 		CF6D92A025056B898FF6AD5390BB61F0 /* AnimatorNodeDebugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F20BBB51E06A92F7FAC2E01068B75E /* AnimatorNodeDebugging.swift */; };
 		D3DF0BE06CF8A892CB087404370823A0 /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8480C91B7BA46B84DF3FE83D92D4B2 /* Transform.swift */; };
 		D43EFAF78921762FCB89BAD286A9EE0F /* PathOutputNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECBC74323CAB5FBD0264C4E5FFE35BE /* PathOutputNode.swift */; };
+		D4B2A0E756B50BDFF123121B855908DF /* DotLottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D368D217A9296CAE45B2E1AFBBBBD82 /* DotLottieView.swift */; };
 		D4DF7A0268FD49C99D0E2065FE727B12 /* dotLottieLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7386852315BF845A141C28258B10CC6 /* dotLottieLoader.swift */; };
 		D75B9A275C2EF688699D3D57C27CE983 /* Zip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADF0010AFA7F1EFB6AB73B99E5A6EBE /* Zip.swift */; };
 		D7E2FCC67B7092026D6C81876695CDEB /* ImageCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BB38B9A7915AA97F60AFE3739B4941 /* ImageCompositionLayer.swift */; };
@@ -166,13 +168,11 @@
 		ECC6749279B056D0B4CD6C68A7E6C2FB /* FillI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDEB5A6602A8DA90AA5EF701924C2CB /* FillI.swift */; };
 		ED65064D827C42D15EA9A5C423F42BF2 /* SizeValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F354B0092D6A0894454DDF77133E4A96 /* SizeValueProvider.swift */; };
 		EDDADA1507CF290DC9F8B152045520FE /* GroupNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C1C4C607A6B27D4DEF7380F08598D2 /* GroupNode.swift */; };
-		EDDE3B61F2ABCF7A420E819140954420 /* dotLottie-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8891BC78D66807AD49307E877B7BA4 /* dotLottie-dummy.m */; };
 		F3EBCE1A7FD5ED6C7B92171288AD6986 /* Interpolatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8C566E4ABFDC1BDCA5F5E61CCA11ED /* Interpolatable.swift */; };
 		F49013E8942A3C0DF755F977FBC569A7 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617C3A0B414C27C44263DB5452326230 /* Color.swift */; };
 		F7176D9634B3830550B491E572B56552 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EECC3FE9DB6D0276D9E0576237220CE /* Lottie.framework */; };
 		F735EF00D6B14494F396E3FD6D2DFF6E /* TextCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4326BE2557922E44D37C6D064C7837E0 /* TextCompositionLayer.swift */; };
 		F862C1CD19A69E8763D35A60F83443C2 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 71B61A0B4C703562FA2D108454E936F8 /* ioapi.c */; };
-		FA64F1413AF3D67E0D512EDACFC4DAD2 /* DotLottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4881312F30F987815B184EE08B4F8E /* DotLottieView.swift */; };
 		FA6C3C70B66C4788C54BED04A89FF84B /* MathKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F1FD7FD8B03E50D066ECD8382B76BF /* MathKit.swift */; };
 		FBB8013B68DE252FF7ECFCAE8FBA88D7 /* GradientValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7040703419D7D7156525287E0D189D /* GradientValueProvider.swift */; };
 		FFE58C24BE36988BB3A964B0FD891AA9 /* TextAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAD34292070D4E762818273651A8402 /* TextAnimator.swift */; };
@@ -241,14 +241,13 @@
 		003ACE1496A830DBBD962D2637E0BDD6 /* AnimatorNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatorNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Protocols/AnimatorNode.swift"; sourceTree = "<group>"; };
 		009BB0E1E433C4675BB96D352A6376B7 /* ShapeLayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeLayerModel.swift; path = "lottie-swift/src/Private/Model/Layers/ShapeLayerModel.swift"; sourceTree = "<group>"; };
 		013B1F3C429CF88E34E8F447E673848C /* Pods-dotLottie_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-dotLottie_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		01A85AE3B3BCAB7D0DCE8930A557188C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		04F65F6BC63A31CD319856EE1E2E5E4E /* ItemsExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ItemsExtension.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Extensions/ItemsExtension.swift"; sourceTree = "<group>"; };
 		06E32F66C4C97C4D2D0742D799AF8D63 /* Pods-dotLottie_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-dotLottie_Tests.modulemap"; sourceTree = "<group>"; };
 		07FABC588BA8CDFB43BF709A0AD8C711 /* LayerImageProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerImageProvider.swift; path = "lottie-swift/src/Private/LayerContainers/Utility/LayerImageProvider.swift"; sourceTree = "<group>"; };
 		091707BB1B1F4EF974D36E954C08F94E /* CompositionLayersInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompositionLayersInitializer.swift; path = "lottie-swift/src/Private/LayerContainers/Utility/CompositionLayersInitializer.swift"; sourceTree = "<group>"; };
 		0B610380E9C7D2980550D4866A2E4E1C /* SingleValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SingleValueProvider.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/ValueProviders/SingleValueProvider.swift"; sourceTree = "<group>"; };
-		0C8891BC78D66807AD49307E877B7BA4 /* dotLottie-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "dotLottie-dummy.m"; sourceTree = "<group>"; };
 		0C8E6AA0DD9445E4E38A43F05BDAE82E /* Pods-dotLottie_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-dotLottie_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		0D368D217A9296CAE45B2E1AFBBBBD82 /* DotLottieView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DotLottieView.swift; path = Sources/dotLottie/DotLottieView.swift; sourceTree = "<group>"; };
 		0E0DDF029EA41D76DFF261F5AE1E0CCE /* Pods-dotLottie_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-dotLottie_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		0F4AA2A1C5AF8BA015DC0C0626FAD50B /* CGFloatExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGFloatExtensions.swift; path = "lottie-swift/src/Private/Utility/Extensions/CGFloatExtensions.swift"; sourceTree = "<group>"; };
 		10492993061B043A9365C39F454F958C /* RectNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RectNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/PathNodes/RectNode.swift"; sourceTree = "<group>"; };
@@ -256,13 +255,12 @@
 		12ABE4E6144DEED8E336B235F6B35B85 /* SolidCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SolidCompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/SolidCompositionLayer.swift"; sourceTree = "<group>"; };
 		167F9A68452E58878F7B84F23DACFDFD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		1686B54B343F9C10788031C40E8D9FC1 /* AnimationImageProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationImageProvider.swift; path = "lottie-swift/src/Public/ImageProvider/AnimationImageProvider.swift"; sourceTree = "<group>"; };
-		16ED9A1D42F7D95BF9BCE93AEC980B2E /* dotLottie-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "dotLottie-prefix.pch"; sourceTree = "<group>"; };
 		1752A3D3D3F2A0D210AA866EE821915F /* LayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerModel.swift; path = "lottie-swift/src/Private/Model/Layers/LayerModel.swift"; sourceTree = "<group>"; };
 		1808F6B917769B7D7E794D65DD01905D /* Stroke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stroke.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Stroke.swift"; sourceTree = "<group>"; };
-		18BBFCAEF8B84F60AEA1E4F0A7A4B20B /* dotLottie-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "dotLottie-umbrella.h"; sourceTree = "<group>"; };
 		19D8E96344403096910B219F435AFE9B /* CompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/CompositionLayer.swift"; sourceTree = "<group>"; };
 		1A1029C42BDDDA510A0DA48314F1B5E1 /* AnimatedControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedControl.swift; path = "lottie-swift/src/Public/iOS/AnimatedControl.swift"; sourceTree = "<group>"; };
 		1A8A1260AF030DE75D7D2C50A32E0D4B /* PointValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PointValueProvider.swift; path = "lottie-swift/src/Public/DynamicProperties/ValueProviders/PointValueProvider.swift"; sourceTree = "<group>"; };
+		1AE4212FCC912DEF9088B57A5D0A33A5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		1F105D147D182FB5E2D42548737EEFC6 /* Zip-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Zip-prefix.pch"; sourceTree = "<group>"; };
 		207AE8ECDA9426920BE38FA6F706A67F /* QuickZip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuickZip.swift; path = Zip/QuickZip.swift; sourceTree = "<group>"; };
 		20E50E4E57AF3937FF9FAD7C7334C635 /* Animation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animation.swift; path = "lottie-swift/src/Private/Model/Animation.swift"; sourceTree = "<group>"; };
@@ -299,11 +297,11 @@
 		45DEB4CA6317B14C257DFBE2475DD9B9 /* Pods-dotLottie_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-dotLottie_Example.modulemap"; sourceTree = "<group>"; };
 		45F1FD7FD8B03E50D066ECD8382B76BF /* MathKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MathKit.swift; path = "lottie-swift/src/Private/Utility/Extensions/MathKit.swift"; sourceTree = "<group>"; };
 		46216F2719C365A8FA09A2C2AFEBFF1D /* CompatibleAnimationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompatibleAnimationView.swift; path = "lottie-swift/src/Public/iOS/Compatibility/CompatibleAnimationView.swift"; sourceTree = "<group>"; };
-		4A4881312F30F987815B184EE08B4F8E /* DotLottieView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DotLottieView.swift; path = Sources/dotLottie/DotLottieView.swift; sourceTree = "<group>"; };
 		4AFA8018011972FCC1B82237A7933646 /* Zip-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Zip-umbrella.h"; sourceTree = "<group>"; };
 		4C70021E1447F21BE4C0809B06EC3D4A /* PrecompAsset.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PrecompAsset.swift; path = "lottie-swift/src/Private/Model/Assets/PrecompAsset.swift"; sourceTree = "<group>"; };
 		4DF79FCCA28BA84BAB054CF1C2F0A121 /* LayerDebugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerDebugging.swift; path = "lottie-swift/src/Private/Utility/Debugging/LayerDebugging.swift"; sourceTree = "<group>"; };
 		4EC9F4A22AE56428C86FBF493E995693 /* StarNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/PathNodes/StarNode.swift"; sourceTree = "<group>"; };
+		4F35C1FE838AA1D6ECED94D5D786A2BE /* dotLottie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = dotLottie.debug.xcconfig; sourceTree = "<group>"; };
 		50DD305E2424B8C5A21A762255342BDD /* AnimationKeypathExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationKeypathExtension.swift; path = "lottie-swift/src/Private/Utility/Extensions/AnimationKeypathExtension.swift"; sourceTree = "<group>"; };
 		51BA97E8B5085EFFB47BC9C0B785CEA7 /* Lottie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Lottie.framework; path = "lottie-ios.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5294A2521B58327F799E9B9B6DAA3546 /* AnimationPublic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationPublic.swift; path = "lottie-swift/src/Public/Animation/AnimationPublic.swift"; sourceTree = "<group>"; };
@@ -311,6 +309,7 @@
 		54C1AD8045E2AD6DABAEB458A8F34369 /* ValueContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValueContainer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/ValueContainer.swift"; sourceTree = "<group>"; };
 		55A0FC75E147448B8B3CC0D799CB5F80 /* GradientStroke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientStroke.swift; path = "lottie-swift/src/Private/Model/ShapeItems/GradientStroke.swift"; sourceTree = "<group>"; };
 		563F1044497622B9E4EFFA790938FAD7 /* ImageLayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageLayerModel.swift; path = "lottie-swift/src/Private/Model/Layers/ImageLayerModel.swift"; sourceTree = "<group>"; };
+		5659F2054027EB5397F46FCAAA3B6FC2 /* dotLottie.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = dotLottie.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5A2A35E6AF492D3505F3A9C807471727 /* GroupInterpolator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GroupInterpolator.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/ValueProviders/GroupInterpolator.swift"; sourceTree = "<group>"; };
 		5A8F691856E11C354E7A08340E945973 /* EllipseNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EllipseNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/PathNodes/EllipseNode.swift"; sourceTree = "<group>"; };
 		5A94A19C9D3AA48A575BD12C2F555388 /* KeypathSearchable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeypathSearchable.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/Protocols/KeypathSearchable.swift"; sourceTree = "<group>"; };
@@ -326,6 +325,7 @@
 		64D717E27F1BA2E6D46335973AD53E9C /* FloatValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatValueProvider.swift; path = "lottie-swift/src/Public/DynamicProperties/ValueProviders/FloatValueProvider.swift"; sourceTree = "<group>"; };
 		65462F312190561A4C718AAE9E2094D1 /* StringExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = "lottie-swift/src/Private/Utility/Extensions/StringExtensions.swift"; sourceTree = "<group>"; };
 		65BB38B9A7915AA97F60AFE3739B4941 /* ImageCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/ImageCompositionLayer.swift"; sourceTree = "<group>"; };
+		66AC6A914FB4E7503A6B456EA5BD3F21 /* dotLottie-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "dotLottie-prefix.pch"; sourceTree = "<group>"; };
 		694BDF84422C1B2647E32E1EB5E50DA6 /* VectorsExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VectorsExtensions.swift; path = "lottie-swift/src/Private/Utility/Primitives/VectorsExtensions.swift"; sourceTree = "<group>"; };
 		697C8BD4A5BCE955E44F34E0B625E0E8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		6A026DB758D415175127FF3C668D5FAB /* ShapeRenderLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeRenderLayer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/RenderLayers/ShapeRenderLayer.swift"; sourceTree = "<group>"; };
@@ -333,13 +333,11 @@
 		6D976E4A1EBD9D5A166708BAC4636EA5 /* dotLottieLoader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = dotLottieLoader.framework; path = dotLottieLoader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E3322AF2E4463A3A1BFD17EDAE8F8CA /* PreCompLayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PreCompLayerModel.swift; path = "lottie-swift/src/Private/Model/Layers/PreCompLayerModel.swift"; sourceTree = "<group>"; };
 		6E392C11C814C11CDD76D4FFFEEB3CB7 /* Group.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Group.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Group.swift"; sourceTree = "<group>"; };
-		6E9D0B06DAF14B53E20AC21461B5EFA4 /* dotLottie.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = dotLottie.swift; path = Sources/dotLottie/dotLottie.swift; sourceTree = "<group>"; };
 		6FEC3199ED8BC918A5D3B2B905C0701E /* LayerTransformNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerTransformNode.swift; path = "lottie-swift/src/Private/LayerContainers/Utility/LayerTransformNode.swift"; sourceTree = "<group>"; };
 		71B61A0B4C703562FA2D108454E936F8 /* ioapi.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ioapi.c; path = Zip/minizip/ioapi.c; sourceTree = "<group>"; };
 		72CADF2EBB735C43972299D9DFE40592 /* lottie-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "lottie-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		731E7D8BA8649928778D5FFF568A68CC /* GradientFillRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientFillRenderer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/Renderables/GradientFillRenderer.swift"; sourceTree = "<group>"; };
 		74FA8B58333C95BA39E4BF8B99A267C3 /* Pods-dotLottie_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-dotLottie_Example.release.xcconfig"; sourceTree = "<group>"; };
-		75819285BFEB217AB9A64446C15FB8D0 /* dotLottie-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "dotLottie-Info.plist"; sourceTree = "<group>"; };
 		771588D5F190A582A26A05EE020D0E97 /* LRUAnimationCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRUAnimationCache.swift; path = "lottie-swift/src/Public/AnimationCache/LRUAnimationCache.swift"; sourceTree = "<group>"; };
 		7994F0B479FE70DFD237CFA9A16F7167 /* Pods_dotLottie_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_dotLottie_Tests.framework; path = "Pods-dotLottie_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A7ECAF9464C204A5C51551CDC14AE1F /* unzip.c */ = {isa = PBXFileReference; includeInIndex = 1; name = unzip.c; path = Zip/minizip/unzip.c; sourceTree = "<group>"; };
@@ -355,24 +353,27 @@
 		83C6CB5BA0E738C3786EA0ECBC5F8731 /* lottie-ios-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "lottie-ios-Info.plist"; sourceTree = "<group>"; };
 		84553D8C821465EC5B08C5ACEC3698BC /* ImageAsset.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageAsset.swift; path = "lottie-swift/src/Private/Model/Assets/ImageAsset.swift"; sourceTree = "<group>"; };
 		853AC0B273CE26CCB5A58A8B54D0F0DE /* AnimationContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationContext.swift; path = "lottie-swift/src/Private/Utility/Helpers/AnimationContext.swift"; sourceTree = "<group>"; };
+		86861151AA4D3779E24C8804924F937F /* dotLottie-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "dotLottie-Info.plist"; sourceTree = "<group>"; };
 		877B66DFFCB6BA5A8A984611A2C71D76 /* CompoundBezierPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompoundBezierPath.swift; path = "lottie-swift/src/Private/Utility/Primitives/CompoundBezierPath.swift"; sourceTree = "<group>"; };
 		8A1DFD7A5415FD73C8393AE79E1669DF /* BezierPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BezierPath.swift; path = "lottie-swift/src/Private/Utility/Primitives/BezierPath.swift"; sourceTree = "<group>"; };
 		8CEAF5538C2BD97CFE9E1E1E1CF14DCA /* KeyframeGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyframeGroup.swift; path = "lottie-swift/src/Private/Model/Keyframes/KeyframeGroup.swift"; sourceTree = "<group>"; };
 		8E71E47254D5161A77E4AAB546BAD3DD /* AnimationViewInitializers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationViewInitializers.swift; path = "lottie-swift/src/Public/Animation/AnimationViewInitializers.swift"; sourceTree = "<group>"; };
 		9058B590C4AA2BCDC29DC6A5F4CF4A23 /* AnimationSubview.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationSubview.swift; path = "lottie-swift/src/Public/iOS/AnimationSubview.swift"; sourceTree = "<group>"; };
 		91DEB81CC115EB07E0FEF42A954BF070 /* AnimatedButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedButton.swift; path = "lottie-swift/src/Public/iOS/AnimatedButton.swift"; sourceTree = "<group>"; };
+		975ACBB0DDAE771911623285D1C2B864 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		9C9945DAC28008E6E752A75DA42D1876 /* Pods-dotLottie_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-dotLottie_Tests-umbrella.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9FA564865D1581E56302343D49BAAA2D /* Pods-dotLottie_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-dotLottie_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9FB1AFC862A4E02EA734A1B27A98055D /* CompatibleAnimationKeypath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompatibleAnimationKeypath.swift; path = "lottie-swift/src/Public/iOS/Compatibility/CompatibleAnimationKeypath.swift"; sourceTree = "<group>"; };
-		A1873CC00E4224185E91E51D782AC833 /* dotLottie.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = dotLottie.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A2EEF39DAA989D4BE9FBAF67C4716B73 /* Rectangle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Rectangle.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Rectangle.swift"; sourceTree = "<group>"; };
+		A362AEF64F417B69F5014EEDD8F0C8B7 /* dotLottie.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = dotLottie.modulemap; sourceTree = "<group>"; };
 		A3C1C4C607A6B27D4DEF7380F08598D2 /* GroupNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GroupNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/RenderContainers/GroupNode.swift"; sourceTree = "<group>"; };
 		A4E36B7C6FF324491EBE6765695C35C9 /* dotLottieLoader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = dotLottieLoader.debug.xcconfig; sourceTree = "<group>"; };
 		A4F161832FFD945F1DF2202F68FB0D58 /* Trim.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Trim.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Trim.swift"; sourceTree = "<group>"; };
 		A7386852315BF845A141C28258B10CC6 /* dotLottieLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = dotLottieLoader.swift; path = Sources/dotLottieLoader/dotLottieLoader.swift; sourceTree = "<group>"; };
 		A845402EF959A57A4640F2A4F5155943 /* Zip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Zip.framework; path = Zip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A88A6E43B348211602F8313E75D9E1FD /* Pods-dotLottie_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-dotLottie_Example-frameworks.sh"; sourceTree = "<group>"; };
+		A906B8C850E829D4CFD36D5A0C35FB62 /* dotLottie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = dotLottie.release.xcconfig; sourceTree = "<group>"; };
 		A96F4ABEA9407ABE13FBAB8DCE01DE9C /* RenderNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RenderNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Protocols/RenderNode.swift"; sourceTree = "<group>"; };
 		AB452FDD9C6A81C11CB89E739B17929B /* Merge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Merge.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Merge.swift"; sourceTree = "<group>"; };
 		ABA1FFC8630505C42F2A6E7E195F13A8 /* GradientFillNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientFillNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/RenderNodes/GradientFillNode.swift"; sourceTree = "<group>"; };
@@ -390,15 +391,15 @@
 		BA31D15231845E77F5CE4D026705493F /* NodeProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NodeProperty.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/NodeProperty.swift"; sourceTree = "<group>"; };
 		BA9CA025B5FF8927FC587C96C13B033F /* zip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = zip.h; path = Zip/minizip/zip.h; sourceTree = "<group>"; };
 		BBDD98CCA8E069DC6B716E1404D2A8BE /* FilepathImageProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FilepathImageProvider.swift; path = "lottie-swift/src/Public/iOS/FilepathImageProvider.swift"; sourceTree = "<group>"; };
-		BC7855A8DA7AD1C98AA28A67A48F9652 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		BCB760709A8C0E90C315CAC47BCD6BB6 /* LayerTextProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerTextProvider.swift; path = "lottie-swift/src/Private/LayerContainers/Utility/LayerTextProvider.swift"; sourceTree = "<group>"; };
+		BE694E8072D5B6A364BB10DBC6D7D1DB /* dotLottie-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "dotLottie-umbrella.h"; sourceTree = "<group>"; };
 		C1F4E963C432B07CDCF13C246E53AC16 /* Pods-dotLottie_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-dotLottie_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		C2B131567E062DEC05F0479BF2E8708F /* dotLottieLoader-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "dotLottieLoader-Info.plist"; sourceTree = "<group>"; };
 		C3B45A969F4734C366E6505CF4B33BE5 /* TrimPathNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TrimPathNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/ModifierNodes/TrimPathNode.swift"; sourceTree = "<group>"; };
+		C3EEBFCBC0F6AF7D6270C319CFAFD11C /* DotLottie.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DotLottie.swift; path = Sources/dotLottie/DotLottie.swift; sourceTree = "<group>"; };
 		C66B7FA0014C3D6BA64FACF2592818A5 /* StrokeRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StrokeRenderer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/Renderables/StrokeRenderer.swift"; sourceTree = "<group>"; };
 		C6CFED7F561DBD06A643EE831A4470D8 /* crypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypt.h; path = Zip/minizip/crypt.h; sourceTree = "<group>"; };
 		C804D7882AF1C5FD8EA28B4E70544D16 /* PathElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PathElement.swift; path = "lottie-swift/src/Private/Utility/Primitives/PathElement.swift"; sourceTree = "<group>"; };
-		C86896720118779715DF5649741CDAB5 /* dotLottie.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = dotLottie.modulemap; sourceTree = "<group>"; };
 		C8C2379E8DBD3051889066B9693A0882 /* NullCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NullCompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/NullCompositionLayer.swift"; sourceTree = "<group>"; };
 		C976BC4F105260FC6EA47F29D82610FF /* TextDocument.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextDocument.swift; path = "lottie-swift/src/Private/Model/Text/TextDocument.swift"; sourceTree = "<group>"; };
 		CB36512413CBD03626CDAA85131141C8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -417,6 +418,7 @@
 		DBC43239CB8BB3301157A1C3F5F45466 /* lottie-ios-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "lottie-ios-umbrella.h"; sourceTree = "<group>"; };
 		DCDB270C082D6F3FFD5B152124C757FF /* AssetLibrary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssetLibrary.swift; path = "lottie-swift/src/Private/Model/Assets/AssetLibrary.swift"; sourceTree = "<group>"; };
 		DD42773F2069A98D3B19FF4B31C33313 /* lottie-ios-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "lottie-ios-prefix.pch"; sourceTree = "<group>"; };
+		DDA7C2E9DC0E5458DDCD213ECA6F3C48 /* dotLottie-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "dotLottie-dummy.m"; sourceTree = "<group>"; };
 		E39EC3B4891B8503ED49D9E268373C2A /* ShapeContainerLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeContainerLayer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/RenderLayers/ShapeContainerLayer.swift"; sourceTree = "<group>"; };
 		E4763125F186557F2B1F196F6E8AB13C /* Pods-dotLottie_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-dotLottie_Example-Info.plist"; sourceTree = "<group>"; };
 		E5499684B73D5C59B4BC1633E0227E1A /* LottieView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LottieView.swift; path = "lottie-swift/src/Public/iOS/LottieView.swift"; sourceTree = "<group>"; };
@@ -430,9 +432,7 @@
 		F05CCD4CF0F6F835EA77A30697BE4ECA /* Glyph.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Glyph.swift; path = "lottie-swift/src/Private/Model/Text/Glyph.swift"; sourceTree = "<group>"; };
 		F354B0092D6A0894454DDF77133E4A96 /* SizeValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SizeValueProvider.swift; path = "lottie-swift/src/Public/DynamicProperties/ValueProviders/SizeValueProvider.swift"; sourceTree = "<group>"; };
 		F3B1992B76B90CD0E5DF5FE444DE0472 /* Zip-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Zip-dummy.m"; sourceTree = "<group>"; };
-		F3DB4682CBC7467F84AFFB7AD8869A25 /* dotLottie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = dotLottie.debug.xcconfig; sourceTree = "<group>"; };
 		F3F20BBB51E06A92F7FAC2E01068B75E /* AnimatorNodeDebugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatorNodeDebugging.swift; path = "lottie-swift/src/Private/Utility/Debugging/AnimatorNodeDebugging.swift"; sourceTree = "<group>"; };
-		F55A677675DCD0E7E26D38E0F57D6EEB /* dotLottie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = dotLottie.release.xcconfig; sourceTree = "<group>"; };
 		F58623E2D12C7A77F1030BF076A95ED8 /* ShapeNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/PathNodes/ShapeNode.swift"; sourceTree = "<group>"; };
 		F5D54377C60C1378FB5B8E34AD6C9824 /* PassThroughOutputNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PassThroughOutputNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/PassThroughOutputNode.swift"; sourceTree = "<group>"; };
 		F71AC04146EAB3BD637895B418BAF1D6 /* GradientStrokeRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientStrokeRenderer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/Renderables/GradientStrokeRenderer.swift"; sourceTree = "<group>"; };
@@ -560,6 +560,16 @@
 			path = dotLottieLoader;
 			sourceTree = "<group>";
 		};
+		4169AFF85DDD9D3C7BB329CD93F2F849 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				5659F2054027EB5397F46FCAAA3B6FC2 /* dotLottie.podspec */,
+				1AE4212FCC912DEF9088B57A5D0A33A5 /* LICENSE */,
+				975ACBB0DDAE771911623285D1C2B864 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 		4FCE5586404834CA02FB0F430AB808EB /* Pods-dotLottie_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -599,19 +609,9 @@
 		6855A9616203BE3692A8415E618DD9F9 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				ACAC38F0557571E10FBC701ECC5FA333 /* dotLottie */,
+				8A0A3A63F802BE8C48B336F7656C8AC0 /* dotLottie */,
 			);
 			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		6CD864828280DC3326AA8943D46F418E /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				A1873CC00E4224185E91E51D782AC833 /* dotLottie.podspec */,
-				01A85AE3B3BCAB7D0DCE8930A557188C /* LICENSE */,
-				BC7855A8DA7AD1C98AA28A67A48F9652 /* README.md */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		74541DF73F692F3D7C20A6852FF6C4D3 /* Frameworks */ = {
@@ -625,19 +625,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		93320B415665C2E0B448D3774FD0841F /* Support Files */ = {
+		8A0A3A63F802BE8C48B336F7656C8AC0 /* dotLottie */ = {
 			isa = PBXGroup;
 			children = (
-				C86896720118779715DF5649741CDAB5 /* dotLottie.modulemap */,
-				0C8891BC78D66807AD49307E877B7BA4 /* dotLottie-dummy.m */,
-				75819285BFEB217AB9A64446C15FB8D0 /* dotLottie-Info.plist */,
-				16ED9A1D42F7D95BF9BCE93AEC980B2E /* dotLottie-prefix.pch */,
-				18BBFCAEF8B84F60AEA1E4F0A7A4B20B /* dotLottie-umbrella.h */,
-				F3DB4682CBC7467F84AFFB7AD8869A25 /* dotLottie.debug.xcconfig */,
-				F55A677675DCD0E7E26D38E0F57D6EEB /* dotLottie.release.xcconfig */,
+				C3EEBFCBC0F6AF7D6270C319CFAFD11C /* DotLottie.swift */,
+				0D368D217A9296CAE45B2E1AFBBBBD82 /* DotLottieView.swift */,
+				4169AFF85DDD9D3C7BB329CD93F2F849 /* Pod */,
+				B4CE40E5782214D704541EE454F20934 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/dotLottie";
+			name = dotLottie;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		A0161ADC862C6CC9DE7A64851BDD6F83 /* Support Files */ = {
@@ -671,16 +668,19 @@
 			path = "Target Support Files/Pods-dotLottie_Tests";
 			sourceTree = "<group>";
 		};
-		ACAC38F0557571E10FBC701ECC5FA333 /* dotLottie */ = {
+		B4CE40E5782214D704541EE454F20934 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				6E9D0B06DAF14B53E20AC21461B5EFA4 /* dotLottie.swift */,
-				4A4881312F30F987815B184EE08B4F8E /* DotLottieView.swift */,
-				6CD864828280DC3326AA8943D46F418E /* Pod */,
-				93320B415665C2E0B448D3774FD0841F /* Support Files */,
+				A362AEF64F417B69F5014EEDD8F0C8B7 /* dotLottie.modulemap */,
+				DDA7C2E9DC0E5458DDCD213ECA6F3C48 /* dotLottie-dummy.m */,
+				86861151AA4D3779E24C8804924F937F /* dotLottie-Info.plist */,
+				66AC6A914FB4E7503A6B456EA5BD3F21 /* dotLottie-prefix.pch */,
+				BE694E8072D5B6A364BB10DBC6D7D1DB /* dotLottie-umbrella.h */,
+				4F35C1FE838AA1D6ECED94D5D786A2BE /* dotLottie.debug.xcconfig */,
+				A906B8C850E829D4CFD36D5A0C35FB62 /* dotLottie.release.xcconfig */,
 			);
-			name = dotLottie;
-			path = ../..;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/dotLottie";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -964,7 +964,7 @@
 			buildConfigurationList = 3D03256E506033D07410B6B5E2604756 /* Build configuration list for PBXNativeTarget "dotLottie" */;
 			buildPhases = (
 				8625DF2EE57730BDD79C4FBE98674C9E /* Headers */,
-				D181B802F25EA2E278DEDD9AE784C30E /* Sources */,
+				09CC843B3296C6BD7CB2AFA6BD863D5F /* Sources */,
 				C66DD9C8C985AB76E1B13FA3AC132656 /* Frameworks */,
 				4E498607C2CD4BA44205E1EF46EBC739 /* Resources */,
 			);
@@ -1117,6 +1117,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		09CC843B3296C6BD7CB2AFA6BD863D5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F81F437175CF216E6B48A75B0ECA930 /* dotLottie-dummy.m in Sources */,
+				842247FB8AA6359AB52D0F1C59E73F4C /* DotLottie.swift in Sources */,
+				D4B2A0E756B50BDFF123121B855908DF /* DotLottieView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		152E83029FE2E77BB321EC58D58CA5E0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1278,16 +1288,6 @@
 				CD9C7B75D570E4F02932A06BBAEF3C21 /* ValueContainer.swift in Sources */,
 				43C001C17DC9CBA1258FC225577C35C1 /* Vectors.swift in Sources */,
 				A437641B24952CACD3677AC103057119 /* VectorsExtensions.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D181B802F25EA2E278DEDD9AE784C30E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EDDE3B61F2ABCF7A420E819140954420 /* dotLottie-dummy.m in Sources */,
-				9B592FA6FB140A925EE2DA644AA1D75C /* dotLottie.swift in Sources */,
-				FA64F1413AF3D67E0D512EDACFC4DAD2 /* DotLottieView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1458,7 +1458,7 @@
 		};
 		50037A6A22739725D156BF74884F9DF1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F55A677675DCD0E7E26D38E0F57D6EEB /* dotLottie.release.xcconfig */;
+			baseConfigurationReference = A906B8C850E829D4CFD36D5A0C35FB62 /* dotLottie.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1806,7 +1806,7 @@
 		};
 		F977465387BF96A91DA5CB12B98572F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3DB4682CBC7467F84AFFB7AD8869A25 /* dotLottie.debug.xcconfig */;
+			baseConfigurationReference = 4F35C1FE838AA1D6ECED94D5D786A2BE /* dotLottie.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

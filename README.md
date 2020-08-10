@@ -51,7 +51,7 @@ import dotLottie
 
 ##### Enabling log
 ```swift
-dotLottie.isLogEnabled = true
+DotLottie.isLogEnabled = true
 ```
 
 ##### Loading from a local file
@@ -59,7 +59,7 @@ dotLottie.isLogEnabled = true
 ```swift
 let animationView = AnimationView()
 
-dotLottie.load(name: "animation") { (animation) in
+DotLottie.load(name: "animation") { (animation) in
     if let animation = animation {
         self.animationView.animation = animation
         self.animationView.bounds = CGRect(x: 0, y: 0, width: 300, height: 300)
@@ -78,7 +78,7 @@ dotLottie.load(name: "animation") { (animation) in
 ```swift
 let animationView = AnimationView()
 
-dotLottie.load(from: URL(string:"https://dotlottie.io/sample_files/animation.lottie")!){ (animation) in
+DotLottie.load(from: URL(string:"https://dotlottie.io/sample_files/animation.lottie")!){ (animation) in
     if let animation = animation {
         self.animationView.animation = animation
         self.animationView.bounds = CGRect(x: 0, y: 0, width: 300, height: 300)
