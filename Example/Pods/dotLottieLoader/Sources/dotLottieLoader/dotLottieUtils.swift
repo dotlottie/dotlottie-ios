@@ -12,6 +12,16 @@ public struct DotLottieUtils {
     public static let dotLottieExtension = "lottie"
     public static let jsonExtension = "json"
     
+    /// Enables log printing
+    public static var isLogEnabled: Bool = false
+    
+    /// Prints log if enabled
+    /// - Parameter text: Text to log
+    public static func log(_ text: String) {
+        guard isLogEnabled else { return }
+        print("[dotLottie] \(text)")
+    }
+    
     /// Temp folder to app directory
     public static var tempDirectoryURL: URL {
         if #available(iOS 10.0, *) {
@@ -62,23 +72,23 @@ public struct DotLottieUtils {
 extension URL {
     
     /// Checks if url is a lottie file
-    var isDotLottieFile: Bool {
+    public var isDotLottieFile: Bool {
         return pathExtension == DotLottieUtils.dotLottieExtension
     }
     
     /// Checks if url is a json file
-    var isJsonFile: Bool {
+    public var isJsonFile: Bool {
         return pathExtension == DotLottieUtils.jsonExtension
     }
     
     /// Checks if url has already been downloaded
-    var isFileDownloaded: Bool {
+    public var isLottieFileDownloaded: Bool {
         let url = DotLottieUtils.downloadsDirectoryURL(for: self)
         return FileManager.default.fileExists(atPath: url.path)
     }
     
     /// Checks if url has been decompressed
-    var isFileDecompressed: Bool {
+    public var isLottieFileDecompressed: Bool {
         let url = DotLottieUtils.animationsDirectoryURL(for: self)
             .appendingPathComponent(DotLottieFile.animationsFolderName)
         var isDirectory: ObjCBool = false
@@ -90,7 +100,7 @@ extension URL {
     }
     
     /// Checks if file is remote
-    var isRemoteFile: Bool {
+    public var isRemoteFile: Bool {
         return absoluteString.contains("http")
     }
 }

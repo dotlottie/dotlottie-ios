@@ -7,7 +7,7 @@ let package = Package(
     name: "dotLottie",
     platforms: [
         .iOS(.v9),
-        .macOS(.v10_10),
+        .macOS(.v10_12),
         .tvOS(.v9)
     ],
     products: [
@@ -17,12 +17,12 @@ let package = Package(
     ],
     dependencies: [
         .package(name: "Lottie", url: "https://github.com/airbnb/lottie-ios.git", from: "3.1.5"),
-        .package(name: "Zip", url: "https://github.com/marmelroy/Zip.git", from: "2.0.0"),
+        .package(name: "dotLottieLoader", url: "https://github.com/eharrison/dotLottieLoader", from: "0.1.0"),
     ],
     targets: [
         .target(
             name: "dotLottie",
-            dependencies: ["Lottie", "Zip"]),
+            dependencies: ["Lottie", "dotLottieLoader"]),
         .testTarget(
             name: "dotLottieTests",
             dependencies: ["dotLottie"]),

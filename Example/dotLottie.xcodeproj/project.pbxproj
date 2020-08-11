@@ -34,7 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00693F072229C1B29EC4332A /* dotLottie.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = dotLottie.podspec; path = ../dotLottie.podspec; sourceTree = "<group>"; };
+		00693F072229C1B29EC4332A /* dotLottie.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = dotLottie.podspec; path = ../dotLottie.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		0671147725BF3536AFE1BCD1 /* Pods_dotLottie_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dotLottie_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		506EF0B5994B56C0CF4DC140 /* Pods_dotLottie_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dotLottie_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B72223FE3E7DA13E5E65857 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -315,12 +315,14 @@
 				"${PODS_ROOT}/Target Support Files/Pods-dotLottie_Example/Pods-dotLottie_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Zip/Zip.framework",
 				"${BUILT_PRODUCTS_DIR}/dotLottie/dotLottie.framework",
+				"${BUILT_PRODUCTS_DIR}/dotLottieLoader/dotLottieLoader.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Zip.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/dotLottie.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/dotLottieLoader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

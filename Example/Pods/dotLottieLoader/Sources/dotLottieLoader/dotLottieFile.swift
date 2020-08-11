@@ -57,7 +57,7 @@ public struct DotLottieFile {
     /// - Returns: success true/false
     private func decompress(from url: URL, in directory: URL, cache: DotLottieCache) -> Bool {
         guard cache.shouldDecompress(from: url) else {
-            DotLottie.log("File already decompressed at \(directory.path)")
+            DotLottieUtils.log("File already decompressed at \(directory.path)")
             return true
         }
         
@@ -66,10 +66,10 @@ public struct DotLottieFile {
         do {
             try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true, attributes: nil)
             try Zip.unzipFile(url, destination: directory, overwrite: true, password: nil)
-            DotLottie.log("File decompressed to \(directory.path)")
+            DotLottieUtils.log("File decompressed to \(directory.path)")
             return true
         } catch {
-            DotLottie.log("Extraction of dotLottie archive failed with error: \(error)")
+            DotLottieUtils.log("Extraction of dotLottie archive failed with error: \(error)")
             return false
         }
     }

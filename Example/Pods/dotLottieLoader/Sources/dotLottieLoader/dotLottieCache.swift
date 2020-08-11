@@ -22,7 +22,7 @@ public enum DotLottieCache {
         case .ignoreCache:
             return url.isRemoteFile
         case .cache:
-            return !url.isFileDownloaded
+            return !url.isLottieFileDownloaded
         }
     }
     
@@ -34,7 +34,7 @@ public enum DotLottieCache {
         case .ignoreCache:
             return true
         case .cache:
-            return !url.isFileDecompressed
+            return !url.isLottieFileDecompressed
         }
     }
 }
