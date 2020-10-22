@@ -35,6 +35,7 @@ it, simply add the following line to your Podfile:
 
 ```swift
 pod 'dotLottie', :git => 'https://github.com/dotlottie/dotlottie-ios.git'
+pod 'dotLottieLoader', :git => 'https://github.com/dotlottie/dotlottieLoader-ios.git'
 ```
 
 ### Swift Package Manager
