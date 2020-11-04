@@ -101,6 +101,21 @@ extension URL {
     
     /// Checks if file is remote
     public var isRemoteFile: Bool {
-        return absoluteString.contains("http")
+        absoluteString.contains("http")
+    }
+    
+    public var urls: [URL] {
+        FileManager.default.urls(for: self) ?? []
+    }
+}
+
+extension FileManager {
+    /// Lists urls for all files in a directory
+    /// - Parameters:
+    ///   - url: URL of directory to search
+    ///   - skipsHiddenFiles: If should or not show hidden files
+    /// - Returns: Returns urls of all files matching criteria in the directory
+    public func urls(for url: URL, skipsHiddenFiles: Bool = true ) -> [URL]? {
+        try? contentsOfDirectory(at: url, includingPropertiesForKeys: nil, options: skipsHiddenFiles ? .skipsHiddenFiles : [])
     }
 }

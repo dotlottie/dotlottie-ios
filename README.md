@@ -24,7 +24,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 - Swift 5.0
 - iOS 9
 - macOS 10.12
-- tvOS 9.0
+- tvOS 10.0
 
 ## Installation
 
@@ -34,8 +34,7 @@ dotLottie-ios is available through [CocoaPods](https://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```swift
-pod 'dotLottie', :git => 'https://github.com/dotlottie/dotlottie-ios.git'
-pod 'dotLottieLoader', :git => 'https://github.com/dotlottie/dotlottieLoader-ios.git'
+pod 'dotLottie'
 ```
 
 ### Swift Package Manager

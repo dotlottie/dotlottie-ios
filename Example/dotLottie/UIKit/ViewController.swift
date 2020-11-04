@@ -27,44 +27,53 @@ class ViewController: UIViewController {
         // replace DotLottie.load(from: URL(string:"")!)
         // with DotLottie.load(name: "pushups")
         
-        DotLottie.load(from: URL(string:"https://dotlottie.io/sample_files/animation.lottie")!) { [weak self] (animation) in
+        DotLottie.load(from: URL(string:"https://dotlottie.io/sample_files/animation-external-image.lottie")!) { [weak self] (animation, lottie) in
             guard let animation = animation else {
                 print("Error loading animation")
                 return
             }
             
-            self?.setupAnimation(animation, title: "Remote .lottie file")
+            self?.setupAnimation(animation, lottie: lottie, title: "Remote .lottie file with image")
         }
         
-        DotLottie.load(from: URL(string:"https://assets9.lottiefiles.com/packages/lf20_2gjZuP.json")!) { [weak self] (animation) in
+        DotLottie.load(from: URL(string:"https://dotlottie.io/sample_files/animation.lottie")!) { [weak self] (animation, lottie) in
             guard let animation = animation else {
                 print("Error loading animation")
                 return
             }
             
-            self?.setupAnimation(animation, title: "Remote JSON file")
+            self?.setupAnimation(animation, lottie: lottie, title: "Remote .lottie file")
         }
         
-        DotLottie.load(name: "lottie") { [weak self] (animation) in
+        DotLottie.load(from: URL(string:"https://assets9.lottiefiles.com/packages/lf20_2gjZuP.json")!) { [weak self] (animation, lottie) in
             guard let animation = animation else {
                 print("Error loading animation")
                 return
             }
             
-            self?.setupAnimation(animation, title: "Local .lottie file")
+            self?.setupAnimation(animation, lottie: lottie, title: "Remote JSON file")
         }
         
-        DotLottie.load(name: "globe") { [weak self] (animation) in
+        DotLottie.load(name: "lottie") { [weak self] (animation, lottie) in
             guard let animation = animation else {
                 print("Error loading animation")
                 return
             }
             
-            self?.setupAnimation(animation, title: "Local JSON file")
+            self?.setupAnimation(animation, lottie: lottie, title: "Local .lottie file")
+        }
+        
+        DotLottie.load(name: "globe") { [weak self] (animation, lottie) in
+            guard let animation = animation else {
+                print("Error loading animation")
+                return
+            }
+            
+            self?.setupAnimation(animation, lottie: lottie, title: "Local JSON file")
         }
     }
     
-    private func setupAnimation(_ animation: Animation, title: String) {
+    private func setupAnimation(_ animation: Animation, lottie: LottieFile?, title: String) {
         let label = UILabel()
         label.textColor = .black
         label.text = title
@@ -73,6 +82,11 @@ class ViewController: UIViewController {
         stackView.addArrangedSubview(label)
         
         let animationView = AnimationView(animation: animation)
+        
+        if let imageUrl = lottie?.imagesUrl {
+            animationView.imageProvider = FilepathImageProvider(filepath: imageUrl)
+        }
+        
         animationView.loopMode = .loop
         
         stackView.addArrangedSubview(animationView)

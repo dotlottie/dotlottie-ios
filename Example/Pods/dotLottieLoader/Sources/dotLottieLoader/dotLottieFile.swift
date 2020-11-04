@@ -31,9 +31,24 @@ public struct DotLottieFile {
         return localUrl.appendingPathComponent(dotLottieJson)
     }
     
-    /// Animation images folder url
-    public var imagesUrl: URL? {
-        return localUrl.appendingPathComponent("\(DotLottieFile.imagesFolderName)/")
+    /// Animations folder url
+    public var animationsUrl: URL {
+        localUrl.appendingPathComponent("\(DotLottieFile.animationsFolderName)")
+    }
+    
+    /// All files in animations folder
+    public var animations: [URL] {
+        FileManager.default.urls(for: animationsUrl) ?? []
+    }
+    
+    /// Images folder url
+    public var imagesUrl: URL {
+        localUrl.appendingPathComponent("\(DotLottieFile.imagesFolderName)")
+    }
+    
+    /// All images in images folder
+    public var images: [URL] {
+        FileManager.default.urls(for: imagesUrl) ?? []
     }
     
     /// Constructor with url.

@@ -91,9 +91,13 @@ public struct DotLottieView: UIViewRepresentable {
         let view = UIView()
         
         if let name = name {
-            DotLottie.load(name: name, completion: setupAnimationView(_:))
+            DotLottie.load(name: name) { (animation, lottie) in
+                setupAnimationView(animation, lottie)
+            }
         } else if let url = url {
-            DotLottie.load(from: url, completion: setupAnimationView(_:))
+            DotLottie.load(from: url) { (animation, lottie) in
+                setupAnimationView(animation, lottie)
+            }
         }
 
         animationView.translatesAutoresizingMaskIntoConstraints = false
@@ -110,11 +114,15 @@ public struct DotLottieView: UIViewRepresentable {
     
     /// Setup animation view with given Lottie Animation
     /// - Parameter animation: Lottie Animation
-    public func setupAnimationView(_ animation: Lottie.Animation?) {
+    public func setupAnimationView(_ animation: Lottie.Animation?, _ lottie: LottieFile?) {
         animationView.animation = animation
         animationView.contentMode = aspectRatio
         animationView.loopMode = loopMode
         animationView.animationSpeed = speed
+        
+        if let url = lottie?.images.first {
+            animationView.imageProvider = FilepathImageProvider(filepath: url)
+        }
         
         if autoPlay {
             animationView.play(completion: completionHandler)

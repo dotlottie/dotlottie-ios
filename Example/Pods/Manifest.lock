@@ -1,38 +1,31 @@
 PODS:
-  - dotLottie (0.1.4):
-    - dotLottieLoader (~> 0.1.0)
+  - dotLottie (0.1.5):
+    - dotLottieLoader (~> 0.1.1)
     - lottie-ios (~> 3.1.5)
-  - dotLottieLoader (0.1.0):
+  - dotLottieLoader (0.1.1):
     - Zip (~> 1.1)
   - lottie-ios (3.1.8)
   - Zip (1.1.0)
 
 DEPENDENCIES:
   - dotLottie (from `../`)
-  - dotLottieLoader (from `https://github.com/dotlottie/dotLottieLoader-ios`)
 
 SPEC REPOS:
   trunk:
+    - dotLottieLoader
     - lottie-ios
     - Zip
 
 EXTERNAL SOURCES:
   dotLottie:
     :path: "../"
-  dotLottieLoader:
-    :git: https://github.com/dotlottie/dotLottieLoader-ios
-
-CHECKOUT OPTIONS:
-  dotLottieLoader:
-    :commit: cd78158746b88c01b9f3cc4ddc114e94f63e06a8
-    :git: https://github.com/dotlottie/dotLottieLoader-ios
 
 SPEC CHECKSUMS:
-  dotLottie: 29045f1762b277f6aac0611ab764e611dd71e6eb
-  dotLottieLoader: 3bcb9a04be6eafd56534bb05b02f706e2ee53e76
+  dotLottie: 0dfb90e73b363ed9f50bf28b970a7fdd6fabeed8
+  dotLottieLoader: 2da90f34748bf986227e3d9da371307423e431e9
   lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
   Zip: 8877eede3dda76bcac281225c20e71c25270774c
 
-PODFILE CHECKSUM: a70917adf5a6e5ca1ed720b6946bb893ea0290a4
+PODFILE CHECKSUM: 82ea7a4a7debe4835db006cb37ee6319204d720e
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.10.0
