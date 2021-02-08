@@ -46,6 +46,13 @@ public class DotLottieLoader {
     ///   - cache: Cache type
     ///   - completion: dotLottieFile
     public static func download(from url: URL, cache: DotLottieCache, completion: @escaping (DotLottieFile?) -> Void) {
+        // file is not remote, so just read
+        guard url.isRemoteFile else {
+            DotLottieUtils.log("Local file [\(url.lastPathComponent)], trying to read")
+            completion(DotLottieFile(url: url, cache: cache))
+            return
+        }
+        
         // file is already either downloaded or decompressed, we don't need to proceed
         guard cache.shouldDownload(from: url) else {
             DotLottieUtils.log("Skipping download for [\(url.lastPathComponent)], trying to read instead")

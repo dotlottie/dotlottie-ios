@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'dotLottie'
-  s.version          = '0.1.5'
+  s.version          = '0.1.6'
   s.summary          = 'An iOS library to natively render .lottie files with the help of Lottie iOS Library https://dotlottie.io/'
 
   s.description      = <<-DESC
@@ -30,6 +30,6 @@ dotLottie is an open-source file format that aggregates one or more Lottie files
   
   s.module_name = 'dotLottie'
   
-  s.dependency 'dotLottieLoader', '~> 0.1.1'
-  s.dependency 'lottie-ios', '~> 3.1.5'
+  s.dependency 'dotLottieLoader', '~> 0.1.3'
+  s.dependency 'lottie-ios', '~> 3.2.0'
 end
