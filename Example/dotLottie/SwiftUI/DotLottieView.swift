@@ -6,6 +6,7 @@
 //
 import SwiftUI
 import Lottie
+import dotLottie
 
 @available(iOS 13.0, *)
 public struct DotLottieView: UIViewRepresentable {
