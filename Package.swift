@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "dotLottie",
     platforms: [
-        .iOS(.v9),
+        .iOS(.v11),
         .macOS(.v10_12),
         .tvOS(.v9)
     ],
@@ -16,7 +16,7 @@ let package = Package(
             targets: ["dotLottie"]),
     ],
     dependencies: [
-        .package(name: "Lottie", url: "https://github.com/airbnb/lottie-ios.git", from: "3.2.0"),
+        .package(name: "Lottie", url: "https://github.com/airbnb/lottie-ios.git", from: "3.3.0"),
         .package(name: "dotLottieLoader", url: "https://github.com/dotLottie/dotLottieLoader", from: "0.1.3"),
     ],
     targets: [
