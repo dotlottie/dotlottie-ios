@@ -11,6 +11,8 @@
   <img src="/Example/dotLottie/Assets/Images.xcassets/AppIcon.appiconset/dotLottie2048-1024.png" width="400">
 </p>
 
+> # ⚠️ This repository is not longer maintained. Please use the latest dotlottie-ios [here](https://github.com/LottieFiles/dotlottie-ios).
+
 dotLottie is an open-source file format that aggregates one or more Lottie files and their associated resources into a single file. They are ZIP archives compressed with the Deflate compression method and carry the file extension of ".lottie".
 
 ## View documentation, FAQ, help, examples, and more at [dotlottie.io](http://dotlottie.io/)
